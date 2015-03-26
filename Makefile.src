@@ -1,0 +1,114 @@
+LANGUE=[FR:FR:FR][EN:EN:EN]
+langue=[FR:fr:FR][EN:en:EN]
+GFDL=../mirror/fdl.sgml
+SRC=$(CIBLE).sgml.$(langue) $(CIBLE).sgml $(CIBLE).dsl.$(langue) $(CIBLE).dsl Makefile Makefile.$(langue) Makefile.src $(GFDL).$(langue)
+IMAGES=$(shell ls images/*.eps) images/netcraft.eps
+SPECS=$(RH)/SPECS
+SOURCES=$(RH)/SOURCES
+
+
+$(GFDL).$(langue): $(GFDL)
+	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(GFDL).$(langue) $(GFDL)
+
+images/%.eps: images/%.png
+	convert $< $@
+
+images/netcraft.eps: images/netcraft.gif
+	convert images/netcraft.gif images/netcraft.png
+	convert images/netcraft.gif images/netcraft.eps
+
+test : test.dsl test.sgml
+	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:test.dsl.$(langue) test.dsl
+	$(WML_LIB)/wml_p1_ipp -N nosynclines -o /tmp/test.sgml test.sgml
+	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:test.sgml.$(langue) /tmp/test.sgml
+	rm -f /tmp/test.sgml
+	openjade -t tex -d test.dsl.$(langue)'#pdf' -o testpdf.tex.$(langue) test.sgml.$(langue)
+	hugepdflatex --interaction nonstopmode -fmt=pdfjadetex -mltex testpdf.tex.$(langue)
+	hugepdflatex --interaction nonstopmode -fmt=pdfjadetex -mltex testpdf.tex.$(langue)
+	hugepdflatex --interaction nonstopmode -fmt=pdfjadetex -mltex testpdf.tex.$(langue)
+	mv testpdf.tex.pdf test.pdf.$(langue)
+
+$(CIBLE).dsl.$(langue) : $(CIBLE).dsl
+	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(CIBLE).dsl.$(langue) $(CIBLE).dsl
+
+$(SPECS)/$(CIBLE).spec.$(langue) : $(CIBLE).spec $(SRC)
+	echo "%define version $(VER)" > $(SPECS)/$(CIBLE).spec
+	cat $(CIBLE).spec >> $(SPECS)/$(CIBLE).spec
+	(cd $(SPECS)/ ; $(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(CIBLE).spec.$(langue) $(CIBLE).spec)
+
+$(CIBLE).sgml.$(langue) : $(CIBLE).sgml
+	$(WML_LIB)/wml_p1_ipp -N nosynclines -o /tmp/$(CIBLE).sgml $(CIBLE).sgml
+	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(CIBLE).sgml.$(langue) /tmp/$(CIBLE).sgml
+	rm -f /tmp/$(CIBLE).sgml
+
+all: $(CIBLE).ps.$(langue) $(CIBLE).pdf.$(langue) index.html.$(langue) $(CIBLE).pdb.$(langue) $(CIBLE).html.$(langue) $(CIBLE).txt.$(langue)
+
+all-rtf: all-$(langue) $(CIBLE).rtf.$(langue)
+
+$(CIBLE).tex.$(langue): $(SRC) $(IMAGES)
+	openjade -t tex -d $(CIBLE).dsl.$(langue)'#print' -o $(CIBLE).tex.$(langue) $(CIBLE).sgml.$(langue)
+
+$(CIBLE).ps.$(langue): $(CIBLE).tex.$(langue)
+	hugelatex --interaction nonstopmode -fmt=jadetex -mltex $(CIBLE).tex.$(langue)
+	hugelatex --interaction nonstopmode -fmt=jadetex -mltex $(CIBLE).tex.$(langue)
+	hugelatex --interaction nonstopmode -fmt=jadetex -mltex $(CIBLE).tex.$(langue)
+	mv $(CIBLE).tex.dvi $(CIBLE).dvi.$(langue)
+	dvips -o $(CIBLE).ps.$(langue) $(CIBLE).dvi.$(langue)
+
+index.html.$(langue): $(SRC)
+	openjade -t sgml -d $(CIBLE).dsl.$(langue)'#html' $(CIBLE).sgml.$(langue)
+	(for i in *.html; do mv $$i $$i.$(langue); done)
+
+$(CIBLE).html.$(langue): $(SRC)
+	openjade -t sgml -d $(CIBLE).dsl.$(langue)'#txt' $(CIBLE).sgml.$(langue) > $(CIBLE).html.$(langue)
+
+result.html.$(langue): $(CIBLE).html.$(langue)
+	# Marche pas à travers FW
+	./check-links.pl $(CIBLE).html.$(langue) > result.html.$(langue)
+
+$(CIBLE).rtf.$(langue): $(SRC)
+	openjade -t rtf -o $(CIBLE).rtf.$(langue) $(CIBLE).sgml.$(langue)
+
+$(CIBLE).txt.$(langue): $(CIBLE).html.$(langue)
+	lynx -dump -force_html $(CIBLE).html.$(langue) > $(CIBLE).txt.$(langue)
+
+$(CIBLE).pdb.$(langue): $(CIBLE).txt.$(langue)
+	txt2pdbdoc -v $(CIBLE).$(langue) $(CIBLE).txt.$(langue) $(CIBLE).pdb.$(langue)
+
+$(CIBLE)pdf.tex.$(langue): $(SRC) $(IMAGES)
+	openjade -t tex -d $(CIBLE).dsl.$(langue)'#pdf' -o $(CIBLE)pdf.tex.$(langue) $(CIBLE).sgml.$(langue)
+
+$(CIBLE).pdf.$(langue): $(CIBLE)pdf.tex.$(langue)
+	hugepdflatex --interaction nonstopmode -fmt=pdfjadetex -mltex $(CIBLE)pdf.tex.$(langue)
+	hugepdflatex --interaction nonstopmode -fmt=pdfjadetex -mltex $(CIBLE)pdf.tex.$(langue)
+	hugepdflatex --interaction nonstopmode -fmt=pdfjadetex -mltex $(CIBLE)pdf.tex.$(langue)
+	mv $(CIBLE)pdf.tex.pdf $(CIBLE).pdf.$(langue)
+
+web:  $(SRC) index.html.$(langue)
+	cp -a *.$(langue) annonce.$(LANGUE) $(DESTDIR)/$(VER)
+	
+rpm-web: $(RH)/RPMS/noarch/$(CIBLE).$(langue)-$(VER)-1.noarch.rpm
+	cp $(RH)/RPMS/noarch/$(CIBLE).$(langue)-$(VER)-1.noarch.rpm $(DESTDIR)/$(VER)
+	cp $(RH)/SRPMS/$(CIBLE).$(langue)-$(VER)-1.src.rpm $(DESTDIR)/$(VER)
+
+LDP: $(CIBLE).dsl.$(langue) $(CIBLE).sgml.$(langue)
+	tar cvhfz $(CIBLE).$(langue)-$(VER).tar.gz images $(CIBLE).dsl.$(langue) $(CIBLE).sgml.$(langue)
+	echo "[EN:Informations on new machines:EN][FR:Voici la nouvelle version du document.:FR] " | mutt -s "$(CIBLE) $(VER)" -a $(CIBLE).$(langue)-$(VER).tar.gz [EN:submit@linuxdoc.org:EN][FR:traduc@traduc.org:FR]
+
+install-$(langue): all-$(langue)
+	rm -rf $(INSTALL_DIR)/usr/doc/$(CIBLE).$(langue)-$(VER)
+	mkdir -p $(INSTALL_DIR)/usr/doc/$(CIBLE).$(langue)-$(VER)
+	cp -a * $(INSTALL_DIR)/usr/doc/$(CIBLE).$(langue)-$(VER)
+
+rpm: $(SRC) $(SPECS)/$(CIBLE).spec.$(langue) all-$(langue)
+	rm -rf ../$(CIBLE).$(langue)-$(VER)
+	mkdir -p ../$(CIBLE).$(langue)-$(VER)
+	cp -a $(SRC) ../$(CIBLE).$(langue)-$(VER)
+	cp -a images ../$(CIBLE).$(langue)-$(VER)
+	(cd .. ; tar cfz $(SOURCES)/$(CIBLE).$(langue)-$(VER).tar.gz $(CIBLE).$(langue)-$(VER) images/*.eps images/*.png)
+	(cd $(SPECS) ; rpm -ba $(CIBLE).spec.$(langue))
+	ln -sf $(RH)/RPMS/noarch/$(CIBLE).$(langue)-$(VER)-*.noarch.rpm .
+
+clean: 
+	rm -f $(SPECS)/$(CIBLE).spec.$(langue) *.html.$(langue) $(CIBLE).{aux,log,out,tex,dvi,pdb,pdf,ps,dsl,sgml,txt}.$(langue) $(RH)/RPMS/noarch/$(CIBLE).$(langue)-$(VER)-*.noarch.rpm $(RH)/SRPMS/$(CIBLE).$(langue)-$(VER)-1.src.rpm ../$(CIBLE).$(langue)-$(VER) $(SOURCES)/$(CIBLE).$(langue)-$(VER).tar.gz Makefile.$(langue) 
+	rm -rf $(CIBLE).$(langue)

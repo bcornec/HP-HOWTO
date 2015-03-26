@@ -1,0 +1,59 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my($flagFR,$flagEN,$ligne,$verbose);
+$verbose = 0;
+$flagFR = 0;
+$flagEN = 0;
+$ligne = 0;
+my $ret = 0;
+
+if ($ARGV[0] eq "-v")
+	{
+	shift;
+	$verbose = 1;
+	}
+open(SGML,"$ARGV[0]") or die "Unable to open input file";
+while (<SGML>)
+	{
+	$ligne++;
+	if (/\[FR:/) 	
+		{
+		print "début FR trouvé ligne $ligne\n" if ($verbose);
+		if ($flagFR == 1) {
+			print "*** PB ligne $ligne FR déjà ouvert\n";
+			$ret++;
+		}
+		$flagFR = 1;
+		}
+	if (/:FR\]/) 	
+		{
+		print "fin FR trouvé ligne $ligne\n" if ($verbose);
+		if ($flagFR == 0) {
+			print "*** PB ligne $ligne FR déjà fermé\n";
+			$ret++;
+		}
+		$flagFR = 0;
+		}
+	if (/\[EN:/) 	
+		{
+		print "début EN trouvé ligne $ligne\n" if ($verbose);
+		if ($flagEN == 1) {
+			print "*** PB ligne $ligne EN déjà ouvert\n";
+			$ret++;
+		}
+		$flagEN = 1;
+		}
+	if (/:EN\]/) 	
+		{
+		print "fin EN trouvé ligne $ligne\n" if ($verbose);
+		if ($flagEN == 0) {
+			print "*** PB ligne $ligne EN déjà fermé\n";
+			$ret++;
+		}
+		$flagEN = 0;
+		}
+	}
+close(SGML);
+exit($ret);
