@@ -6,14 +6,19 @@ RH=/usr/src/redhat
 
 .EXPORT_ALL_VARIABLES:
 
-all: Makefile.fr Makefile.en
+all: Makefile.fr Makefile.en curdate
 	if [ ! -d images ]; then ln -sf ../images ; fi
 	./checkFREN $(CIBLE).sgml
+	make -f Makefile.fr all
+	make -f Makefile.en all
+
+curdate:
 	echo -n "<!ENTITY curdate \"" > curdate.sgml
 	echo -n `date +"%Y-%m-%d"` >> curdate.sgml
 	echo "\">" >> curdate.sgml
-	make -f Makefile.fr all
-	make -f Makefile.en all
+	rm -f version.sgml
+	echo "<!ENTITY curver \"$(VER)\">" > version.sgml
+
 	
 test: Makefile.fr Makefile.en
 	make -f Makefile.fr test
@@ -29,8 +34,6 @@ clean: Makefile.fr Makefile.en
 	make -f Makefile.en clean
 #	rm -f images/netcraft.gif images/netcraft.png
 #	lynx -dump http://www.netcraft.com/survey/Reports/current/overallc.gif > images/netcraft.gif
-	rm -f version.sgml
-	echo "<!ENTITY curver \"$(VER)\">" > version.sgml
 
 install: web
 	
@@ -51,10 +54,10 @@ rpm: all
 	ln -sf $(RH)/SRPMS/$(CIBLE).fr-$(VER)-1.src.rpm .
 	ln -sf $(RH)/SRPMS/$(CIBLE).en-$(VER)-1.src.rpm .
 	
-Makefile.en: Makefile.src
+Makefile.en: Makefile.src curdate
 	$(WML_LIB)/wml_p9_slice -o ENuUNDEF:Makefile.en Makefile.src
 
-Makefile.fr: Makefile.src
+Makefile.fr: Makefile.src curdate
 	$(WML_LIB)/wml_p9_slice -o FRuUNDEF:Makefile.fr Makefile.src
 
 livhp: all

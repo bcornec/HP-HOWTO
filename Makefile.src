@@ -114,6 +114,7 @@ clean:
 	rm -rf $(CIBLE).dsl.$(langue)
 	rm -rf $(CIBLE).tex.$(langue)
 	rm -rf $(CIBLE).sgml.$(langue)
+	rm -rf $(CIBLE).$(langue).xml
 
 xml: $(CIBLE).sgml.$(langue)
 	osx -b x -x lower -x no-nl-in-tag $< 2>/dev/null | awk 'NR == 2 {print "<!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\">"}; {print}' | xmllint --format --encode UTF-8 --noblanks --output $(CIBLE).$(langue).xml -
