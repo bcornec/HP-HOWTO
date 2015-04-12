@@ -1,14 +1,14 @@
 LANGUE=[FR:FR:FR][EN:EN:EN]
 langue=[FR:fr:FR][EN:en:EN]
 GFDL=../mirror/fdl.sgml
-SRC=$(CIBLE).sgml.$(langue) $(CIBLE).sgml $(CIBLE).dsl.$(langue) $(CIBLE).dsl Makefile Makefile.$(langue) Makefile.src $(GFDL).$(langue)
+SRC=$(CIBLE).sgml.$(langue) $(CIBLE).sgml $(CIBLE).dsl.$(langue) $(CIBLE).dsl Makefile Makefile.$(langue) Makefile.src
 IMAGES=$(shell ls images/*.eps) images/netcraft.eps
 SPECS=$(RH)/SPECS
 SOURCES=$(RH)/SOURCES
 
 
-$(GFDL).$(langue): $(GFDL)
-	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(GFDL).$(langue) $(GFDL)
+#$(GFDL).$(langue): $(GFDL)
+#	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(GFDL).$(langue) $(GFDL)
 
 images/%.eps: images/%.png
 	convert $< $@
@@ -19,7 +19,7 @@ images/netcraft.eps: images/netcraft.gif
 
 test : test.dsl test.sgml
 	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:test.dsl.$(langue) test.dsl
-	$(WML_LIB)/wml_p1_ipp -N nosynclines -o /tmp/test.sgml test.sgml
+	$(WML_LIB)/wml_p1_ipp -N -o /tmp/test.sgml test.sgml
 	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:test.sgml.$(langue) /tmp/test.sgml
 	rm -f /tmp/test.sgml
 	openjade -t tex -d test.dsl.$(langue)'#pdf' -o testpdf.tex.$(langue) test.sgml.$(langue)
@@ -37,7 +37,7 @@ $(SPECS)/$(CIBLE).spec.$(langue) : $(CIBLE).spec $(SRC)
 	(cd $(SPECS)/ ; $(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(CIBLE).spec.$(langue) $(CIBLE).spec)
 
 $(CIBLE).sgml.$(langue) : $(CIBLE).sgml
-	$(WML_LIB)/wml_p1_ipp -N nosynclines -o /tmp/$(CIBLE).sgml $(CIBLE).sgml
+	$(WML_LIB)/wml_p1_ipp -N -o /tmp/$(CIBLE).sgml $(CIBLE).sgml
 	$(WML_LIB)/wml_p9_slice -o $(LANGUE)uUNDEF:$(CIBLE).sgml.$(langue) /tmp/$(CIBLE).sgml
 	rm -f /tmp/$(CIBLE).sgml
 
@@ -110,5 +110,10 @@ rpm: $(SRC) $(SPECS)/$(CIBLE).spec.$(langue) all-$(langue)
 	ln -sf $(RH)/RPMS/noarch/$(CIBLE).$(langue)-$(VER)-*.noarch.rpm .
 
 clean: 
-	rm -f $(SPECS)/$(CIBLE).spec.$(langue) *.html.$(langue) $(CIBLE).{aux,log,out,tex,dvi,pdb,pdf,ps,dsl,sgml,txt}.$(langue) $(RH)/RPMS/noarch/$(CIBLE).$(langue)-$(VER)-*.noarch.rpm $(RH)/SRPMS/$(CIBLE).$(langue)-$(VER)-1.src.rpm ../$(CIBLE).$(langue)-$(VER) $(SOURCES)/$(CIBLE).$(langue)-$(VER).tar.gz Makefile.$(langue) 
-	rm -rf $(CIBLE).$(langue)
+	rm -f $(SPECS)/$(CIBLE).spec.$(langue) *.html.$(langue) $(CIBLE).{aux,log,out,tex,dvi,pdb,pdf,ps,txt}.$(langue) $(RH)/RPMS/noarch/$(CIBLE).$(langue)-$(VER)-*.noarch.rpm $(RH)/SRPMS/$(CIBLE).$(langue)-$(VER)-1.src.rpm ../$(CIBLE).$(langue)-$(VER) $(SOURCES)/$(CIBLE).$(langue)-$(VER).tar.gz Makefile.$(langue)
+	rm -rf $(CIBLE).dsl.$(langue)
+	rm -rf $(CIBLE).tex.$(langue)
+	rm -rf $(CIBLE).sgml.$(langue)
+
+xml: $(CIBLE).sgml.$(langue)
+	osx -b x -x lower -x no-nl-in-tag $< 2>/dev/null | awk 'NR == 2 {print "<!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\">"}; {print}' | xmllint --format --encode UTF-8 --noblanks --output $(CIBLE).$(langue).xml -
