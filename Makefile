@@ -34,6 +34,7 @@ clean: Makefile.fr Makefile.en
 	make -f Makefile.en clean
 #	rm -f images/netcraft.gif images/netcraft.png
 #	lynx -dump http://www.netcraft.com/survey/Reports/current/overallc.gif > images/netcraft.gif
+	rm curdate.sgml version.sgml images/netcraft.eps images/netcraft.png
 
 install: web
 	
