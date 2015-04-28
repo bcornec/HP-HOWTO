@@ -1,0 +1,13 @@
+Some information on how FreeBSD work on HP ProLiant servers:
+
+Servers having a real Smart Array controler are using the CISS driver on
+FreeBSD
+Code available at
+https://github.com/freebsd/freebsd/blob/master/sys/dev/ciss/ciss.c
+Doc:
+https://www.freebsd.org/cgi/man.cgi?query=ciss&apropos=0&sektion=0&manpath=FreeBSD+10.1-RELEASE+and+Ports&arch=default&format=html
+Tip:
+http://lserinol.blogspot.fr/2012/03/freebsd-ciss-driver-logical-drive-limit.html
+
+PIC IDs of SMart Array Controlers are available at:
+https://pci-ids.ucw.cz/read/PC/103c/3239?sort=rid
