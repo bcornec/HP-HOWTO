@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE appendix [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<appendix version="5.0" xml:id="appe-Documentation-HP-HOWTO-Revision_History" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Revision History</title>
+    <revhistory>
+      <revision>
+        <revnumber>0.8-0</revnumber>
+        <date>The 25th of July, 1999</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>First version publically available</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.85-0</revnumber>
+        <date>The 7th of September, 1999</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Docbook 3.1.</member>
+            <member>Monitors section.</member>
+            <member>A lot of typos corrected.</member>
+            <member>Numerous links added.</member>
+            <member>Makefile rewritten.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.86-0</revnumber>
+        <date>The 27th of September, 1999</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>August and September 1999 machines.</member>
+            <member>DSSSL 1.45 + own StyleSheet.</member>
+            <member>Makefile adapted.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.87-0</revnumber>
+        <date>The 19th of January, 2000</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Oct 1999-Jan 2000.</member>
+            <member>ENTITY for Apache, RedHat, Samba, ...</member>
+            <member>Use of an own DSSSL and DTD.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.88-0</revnumber>
+        <date>The 15th of March, 2000</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Feb-Mar 2000.</member>
+            <member>English translation.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.89-0</revnumber>
+        <date>The 8th of July, 2000</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Apr-Jul 2000.</member>
+            <member>Paragraph on scanners.</member>
+            <member>Paragraph on HP as a free software user.</member>
+            <member>Paragraph on Kayak Sound and Maxilife.</member>
+            <member>Revision of the version number.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.90-0</revnumber>
+        <date>The 11th of August, 2000</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Aug 2000.</member>
+            <member>DocBook 4.1 - DSSSL 1.56.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.91-0</revnumber>
+        <date>The 11th of October, 2000</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Sep/Oct 2000.</member>
+            <member>Press releases</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.92-0</revnumber>
+        <date>The 27th of December, 2000</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Nov &amp; Dec 2000.</member>
+            <member>Parisc information.</member>
+            <member>OfficeJet.</member>
+            <member>X terminals.</member>
+            <member>Tape drives.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.93-0</revnumber>
+        <date>The 6th of March, 2001</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Jan-Apr 2001.</member>
+            <member>Report of headers and footers on following pages (PS).</member>
+            <member>More on the LP1000r.</member>
+            <member>Change of licence for GFDL.</member>
+            <member>DocBook 1.64.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.94-0</revnumber>
+        <date>The 21th of December, 2001</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines May-Dec 2001.</member>
+            <member>Automatic management of the date.</member>
+            <member>Big updates to put in place on HyPer-Linux.org.</member>
+            <member>Japanese translation.</member>
+            <member>lot of modifs.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.95-0</revnumber>
+        <date>The 24th of July, 2003</date>
+        <authorinitials>Bruno Cornec</authorinitials>
+        <revdescription>
+          <simplelist>
+            <member>Informations on new machines Jan-Dec 2002.</member>
+            <member>Antispam mail addresses. :-(</member>
+            <member>Links on TOC for PDF.</member>
+            <member>Notes at the bottom of page.</member>
+            <member>Links for scanners added.</member>
+            <member>Links for digital camera added.</member>
+            <member>Proliant servers added.</member>
+            <member>iPAQ added.</member>
+          </simplelist>
+        </revdescription>
+      </revision>
+    </revhistory>
+</appendix>
+

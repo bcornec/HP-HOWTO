@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE legalnotice [
+<!ENTITY % BOOK_ENTITIES SYSTEM "../HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<legalnotice version="5.0" xml:lang="en-US" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>License</title>
+      <para>Copyright <trademark class="copyright"></trademark> &YEAR; &HOLDER;.</para>
+      <para>This HOWTO is a free documentation thanks to Medasys and HP for whom I do that job; you may copy, redistribute and/or modify it under the terms of the <emphasis>GNU Free Documentation License, Version 1.1</emphasis> or any later version published by the Free Software Foundation; with no Invariant Sections, Front-Cover Texts or Back-Cover Texts (the latest version is presently available at <link xlink:href="http://www.gnu.org/licenses/fdl.txt">http://www.gnu.org/licenses/fdl.txt</link>). This document is distributed hoping it will be useful, but <emphasis>without any guaranty</emphasis>; you're completely responsible of its use, and couldn't complain in case it doesn't work, or even if it breaks the hardware. All the software included in it, if not already copyrighted is released under the GPL. </para>
+</legalnotice>
+

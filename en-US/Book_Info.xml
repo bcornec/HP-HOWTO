@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE info [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<info version="5.0" xml:id="info-Documentation-HP-HOWTO-HP_HOWTO" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>HP-HOWTO</title>
+	<subtitle>Configuration Guide and Use of HP Products under Linux</subtitle>
+	<productname>Documentation</productname>
+	<productnumber>0.96</productnumber>
+	<edition>0</edition>
+	<abstract>
+          <para><graphic fileref="./images/hp.png" align="left"/></para>
+          <para>This document describes the use of products available in the <ulink url="http://www.hp.com">Hewlett-Packard</ulink> (HP) catalog with Linux and some free software. It gives the state of the support for hardware, software to use, answers to some frequently asked questions and gives elements of sizing. The goals are to offer a general view of free software functions and their use at best with HP products; as well as to make new users of HP products rapidly operational and also to allow others to choose their products knowing facts.</para>
+	</abstract>
+	<orgname>
+	<inlinemediaobject>
+		<imageobject>
+			<imagedata fileref="./images/hp-howto.png" />
+		</imageobject>
+	</inlinemediaobject>
+	</orgname>
+	<xi:include href="Legal_Notice.xml" />
+	<xi:include href="Author_Group.xml" />
+</info>
+

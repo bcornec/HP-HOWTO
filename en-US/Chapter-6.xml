@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="customers">
+    <title>Customer References </title>
+    <para>Here is a list of HP/Linux references:</para>
+    <itemizedlist spacing="compact" mark="bullet">
+      <listitem>
+        <para><ulink url="http://www.amazon.com">Amazon</ulink>: Mix of HP-UX and Linux solutions as related on <ulink url="http://www.zdnetindia.com/techzone/linuxcentre/stories/42345.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.netage.de">NetAge</ulink>: HP Secure OS for Linux (aka Trusted linux).</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.checkpoint.de">Checkpoint</ulink>: HP Secure OS for Linux (aka Trusted linux).</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.sidefx.com">Side Effects</ulink>: Port of their software <ulink url="http://industryclick.com//magazinearticle.asp?magazinearticleid=122151[amp   ]magazineid=124[amp   ]mode=print">Houdini</ulink> on Linux.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.nothingreal.com">Nothing Real</ulink>: Port of their software <ulink url="http://industryclick.com//magazinearticle.asp?magazinearticleid=122151[amp   ]magazineid=124[amp   ]mode=print">Shake</ulink> on Linux.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.boeing.com">Boeing</ulink>: Linux and HP clusters help Boeing R[amp   ]D reduce costs as related on <ulink url="http://www.hp.com/products1/linux/infolibrary/boeing.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.viawest.net">ViaWest</ulink>: a hp/Linux ISP as related on <ulink url="http://www.hp.com/products1/linux/infolibrary/viawest.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.iai.co.il/">Israel Aircraft Industry</ulink>: a hp/Linux performance cluster user as related on <ulink url="http://www.hp.com/products1/linux/infolibrary/israel.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.speedera.com/">SpeedEra</ulink>: a hp/Linux ISP as related on <ulink url="http://www.hp.com/products1/linux/infolibrary/speedera.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.dreamworks.com">Dreamworks</ulink>: The Shreck movie realised on HP netserver/Linux as related on <ulink url="http://www.zdnet.com/zdnn/stories/news/0,4586,2761566,00.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.cern.ch">Cern</ulink>: Performance cluster realised with HP kayak/Linux as related on <ulink url="http://hp-linux.cern.ch"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.viaccess.fr/">Viaccess</ulink>: High availability cluster realised with HP Proliant/Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/Viaccess.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.core.fr/">Core Products</ulink>: SAP with HP Netservers/Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/CoreProducts.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.cacr.caltech.edu/">California Institute of Technology's Center for Advanced Computing Research</ulink>: TeraGrid project with an Itanium2 cluster on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/Caltech.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.cpd.wm.edu">Center of Piezoelectrics by Design</ulink>: Research project with Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/PiezoelectricDesign_SS.pdf"/> and <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/CPD_SS_hpVersion_A.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.esiee.fr">ESIEE</ulink>: Gelato program Research project with Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/ESIEE_GB1.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://web.mit.edu/sma">National University Singapore</ulink>: Life Science Research project with Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/mit_singapore.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.osc.edu/">Ohio Supercomputing Center</ulink>: Life Science Research project with Itanium2 servers on Linux as related on <ulink url="http://www.hp.com/hpinfo/newsroom/press/2002/021021d.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.pnl.gov">Pacific Northwest National Laboratory</ulink>: High Perfomance Computing Cluster of Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/PNNL_Cust_Success_f2.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.rice.edu/">Rice University</ulink>: High Perfomance Computing Cluster of Itanium2 servers on Linux as related on <ulink url="http://www.hp.com/hpinfo/newsroom/press/2002/021119e.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.sait.samsung.co.kr/">Samsung Advanced Institute of Technology</ulink>: Grid Computing with Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/SAIT_Itanium-Success-Story.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.tlc2.uh.edu">University of Houston</ulink>: High Perfomance Computing Cluster of Itanium2 servers on Linux as related on <ulink url="http://www.tlc2.uh.edu/Itanium2.htm"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.bp.com/">BP</ulink>: Seismic Imaging project with Itanium2 servers on Linux as related on <ulink url="http://www.hp.com/hpinfo/newsroom/press/2003/030421a.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.bund.de">German Police</ulink>: Bea Java Application server for crime fightwith Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/PoliceSaxony.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.inrialpes.fr">Inria Grenoble</ulink>: High Perfomance Computing Cluster of Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/Inria2-GB.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.psc.edu/">Pittsburgh Supercomputing Center</ulink>: Grid Computing with Itanium2 servers on Linux as related on <ulink url="http://www.hp.com/hpinfo/newsroom/press/2002/021114c.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www-lns.mit.edu/">MIT Laboratory for Nuclear Science</ulink>: Particles Computing with Ampha servers on Linux as related on <ulink url="http://www.hp.com/techservers/news/news_hpc_18995.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.qub.ac.uk/">Queens University, Belfast</ulink>: High Perfomance Computing Cluster of Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/Queens_Success_Story.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.ntnu.no/">Norwegian University of Science and Technology</ulink>: Grid Computing with Itanium2 servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/norway.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.phys.uregina.ca/">University of Regina, Canada</ulink>: Computing and simulation with Ampha servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/success_regina.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.cs.sandia.gov/cplant/">Sandia National Laboratories</ulink>: Nuclear research with Ampha servers on Linux as related on <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/Docs/success_sandia.pdf"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.uni-wuppertal.de/">University of Wuppertal, Germany</ulink>: The biggest performance cluster in Germany with Ampha servers on Linux as related on <ulink url="http://www.hp.com/techservers/basic_research/success_wuppertal.html"/>.</para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.boeing.com/">Boeing</ulink>: Performance cluster with MSC.Linux as related on <ulink url="http://h30046.www3.hp.com/casestudy.php?topiccode=20020102_Boeing[amp   ]searchid=0[amp   ]showpage=[amp   ]searchtopiccode=LINUXCASESTUDY[amp   ]pagesite=LINUX[amp   ]regioncode=[amp   ]langcode=USENG"/>.</para>
+      </listitem>
+    </itemizedlist>
+</chapter>
+

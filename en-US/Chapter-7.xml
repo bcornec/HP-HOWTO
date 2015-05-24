@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="references">
+    <title>References</title>
+    <para>I already mentioned the documentation files, installed typically under the directory <filename moreinfo="none">/usr/src/linux/Documentation</filename>. They are a real gold mine of useful information.</para>
+    <para>The following FAQ (Frequently Asked Questions) are periodically posted in the group <ulink url="news:news.answers"/> and archived on FTP servers like <ulink url="ftp://rtfm.mit.edu"/>:</para>
+    <itemizedlist spacing="compact" mark="bullet">
+      <listitem>
+        <para>FAQ of the group <ulink url="news:comp.os.linux.announce"/></para>
+      </listitem>
+      <listitem>
+        <para>FAQ of the group <ulink url="news:comp.sys.hp.hpux"/></para>
+      </listitem>
+    </itemizedlist>
+    <para>A lot of other Linux HOWTO contain information useful related to our subject:</para>
+    <itemizedlist spacing="compact" mark="bullet">
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/SCSI-HOWTO.html">Linux SCSI HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/CD-Writing-HOWTO.html">Linux CD-Writing HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/Hardware-HOWTO.html">Linux Hardware HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/Distribution-HOWTO.html">Linux Distribution HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/Kernel-HOWTO.html">Linux Kernel HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/Sound-HOWTO.html">Linux Sound HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/PCMCIA-HOWTO.html">Linux PCMCIA HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linuxdoc.org/HOWTO/SMP-HOWTO.html">Linux SMP HOWTO</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linux-usb.org/howtos.html">USB under Linux</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://tuxmobil.org/howtos.html">Linux Laptop Guide</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.linux-laptop.net/hp.html">Linux on HP Laptops</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://www.handhelds.org/handhelds-faq/handhelds-faq.html">Linux on HP iPAQ</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="http://hardware.linuxfaqs.de/view.php?tab=peri[amp   ]ctype=Scanner">Linux and most HP digital image products</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>The following Usenet groups cover subjects related to HP:</para>
+    <itemizedlist spacing="compact" mark="bullet">
+      <listitem>
+        <para><ulink url="news:comp.sys.hp.hardware"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para><ulink url="news:comp.sys.hp.misc"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>You may also consult the groups mentioned in <xref linkend="service"/>.</para>
+    <para>On Internet, you may consult with a great benefit the following sites:
+    <table frame="none" colsep="0" rowsep="0" tocentry="1" shortentry="0" pgwide="1">
+      <title>Web sites of HP</title>
+      <tgroup cols="2" align="char" charoff="50">
+        <colspec colnum="1" colwidth="2*" colsep="0" align="left"/>
+        <colspec colnum="2" colwidth="4*" colsep="0" align="left"/>
+        <thead>
+          <row><entry>Subject</entry><entry>URL</entry></row>
+        </thead>
+        <tbody>
+          <row><entry>HP Linux Portal</entry><entry><ulink url="http://www.hp.com/go/linux"/></entry></row>
+          <row><entry>HP and Linux</entry><entry><ulink url="http://www.hp-linux.org"/></entry></row>
+          <row><entry>HP France Education Linux</entry><entry><ulink url="http://hpwww.ec-lyon.fr/hpeduc/education/offre/linux/educ_linux.html"/></entry></row>
+          <row><entry>HP Support</entry><entry><ulink url="http://www.hp.com/hps/support/h_linux.htm"/></entry></row>
+          <row><entry>HP HOWTO</entry><entry><ulink url="http://www.HyPer-Linux.org/HP-HOWTO/current/index.html"/></entry></row>
+          <row><entry>Linux Pa-Risc (Puffin Group)</entry><entry><ulink url="http://www.parisc-linux.org"/></entry></row>
+          <row><entry>Linux Pa-Risc (ESIEE)</entry><entry><ulink url="http://mkhppa1.esiee.fr/en/"/></entry></row>
+          <row><entry>PA-RISC/Linux Boot HOWTO</entry><entry><ulink url="http://mkhppa1.esiee.fr/parisc-linux-boot/parisc-linux-boot/index.html"/></entry></row>
+          <row><entry>Linux and Handhelds devices</entry><entry><ulink url="http://www.handhelds.org"/></entry></row>
+          <row><entry>iPAQ HOWTO</entry><entry><ulink url="http://mstempin.free.fr/linux-ipaq/"/></entry></row>
+          <row><entry>Compaq ACPI HOWTO</entry><entry><ulink url="http://www.cpqlinux.com/acpi-howto.html"/></entry></row>
+          <row><entry>Linux and HP Labs</entry><entry><ulink url="http://www.hpl.hp.com/research/linux"/></entry></row>
+          <row><entry>Linux IA64</entry><entry><ulink url="http://www.linuxia64.org"/></entry></row>
+          <row><entry>Linux IA64 (HP Labs)</entry><entry><ulink url="http://dtf.external.hp.com/dtf/swdev/1999/08/feature1_a.html"/></entry></row>
+          <row><entry>HP embedded software developer's network</entry><entry><ulink url="http://devnet.hp.com"/></entry></row>
+          <row><entry>HP printer drivers</entry><entry><ulink url="http://hp.sourceforge.net/"/></entry></row>
+          <row><entry>Compaq Servers and Linux</entry><entry><ulink url="http://www.cpqlinux.com"/></entry></row>
+          <row><entry>HP RedHat certification</entry><entry><ulink url="http://bugzilla.redhat.com/certification/cert-report.php3?mod_company=Hewlett+Packard"/></entry></row>
+          <row><entry>HP Linuxcare certification</entry><entry><ulink url="http://www.linuxcare.com/labs/certs/C1F5.epl"/></entry></row>
+          <row><entry>SAP HP Netserver certification</entry><entry><ulink url="http://www.sap.com/solutions/technology/linux/hp-hw.htm"/></entry></row>
+          <row><entry>HP Utigroup</entry><entry><ulink url="http://www.hputigroup.com"/></entry></row>
+          <row><entry>HP and Wireless</entry><entry><ulink url="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/"/></entry></row></tbody></tgroup></table>
+<table frame="none" colsep="0" rowsep="0" tocentry="1" shortentry="0" orient="land" pgwide="1"><title>Other fundamental sites on Linux and Open Source Software</title><tgroup cols="2" align="char" charoff="50"><colspec colnum="1" colwidth="2*" colsep="0" align="left"/><colspec colnum="2" colwidth="4*" colsep="0" align="left"/><thead><row><entry>Subject</entry><entry>URL</entry></row></thead><tbody><row><entry>Linux Documentation Project</entry><entry><ulink url="http://www.linuxdoc.org"/></entry></row>
+          <row><entry>Linux Weekly News - Summary of 1998</entry><entry><ulink url="http://lwn.net/1999/features/1998timeline/"/></entry></row>
+          <row><entry>Linux Weekly News - Summary of 1999</entry><entry><ulink url="http://lwn.net/1999/features/Timeline/"/></entry></row>
+          <row><entry>Linux Weekly News - Summary of 2000</entry><entry><ulink url="http://lwn.net/2000/features/Timeline/"/></entry></row>
+          <row><entry>Linux Weekly News - Summary of 2001</entry><entry><ulink url="http://lwn.net/2001/features/Timeline/"/></entry></row>
+          <row><entry>Linux Weekly News - Summary of 2002</entry><entry><ulink url="http://lwn.net/Articles/16858/"/></entry></row>
+          <row><entry>IOS Counter</entry><entry><ulink url="http://www.leb.net/hzo/ioscount/index.html"/></entry></row>
+          <row><entry>Comparison MS-Windows NT Server 4.0 -- Unix</entry><entry><ulink url="http://www.linux-france.com/article/these/unix-vs-nt/unix-vs-nt.html"/></entry></row>
+          <row><entry>Netcraft studies</entry><entry><ulink url="http://www.netcraft.com/survey/"/></entry></row>
+          <row><entry>L'AFUL (Association)</entry><entry><ulink url="http://www.aful.org"/></entry></row>
+          <row><entry>APRIL (Association)</entry><entry><ulink url="http://www.april.org"/></entry></row>
+          <row><entry>Linux Center</entry><entry><ulink url="http://www.linux-center.org"/></entry></row>
+          <row><entry>Linux France</entry><entry><ulink url="http://www.linux-france.com/"/></entry></row>
+          <row><entry>Linux Journal</entry><entry><ulink url="http://www.linuxjournal.com"/></entry></row>
+          <row><entry>Linux Gazette</entry><entry><ulink url="http://www.linuxgazette.com/"/></entry></row>
+          <row><entry>Linux Magazine France</entry><entry><ulink url="http://www.linuxmag-france.com/"/></entry></row>
+          <row><entry>Linux Start</entry><entry><ulink url="http://linuxstart.com/index.html"/></entry></row>
+          <row><entry>Da Linux French Page</entry><entry><ulink url="http://linuxfr.org/news/"/></entry></row>
+          <row><entry>RedHat Hardware support</entry><entry><ulink url="http://www.redhat.com/cgi-bin/support"/></entry></row>
+          <row><entry>RedHat 6.2 tips and tricks</entry><entry><ulink url="http://www.redhat.com/support/resources/gotchas/6.2/gotchas-6.2.html"/></entry></row>
+          <row><entry>RedHat 7.1 tips and tricks</entry><entry><ulink url="http://www.redhat.com/support/resources/gotchas/7.1/gotchas-71.html"/></entry></row>
+          <row><entry>Mandrake Hardware support for HP</entry><entry><ulink url="http://www.linux-mandrake.com/fr/hardware.php3?F_FAMILY=all[amp   ]F_MANUFACTURER=HP[amp   ]F_STATUS=all[amp   ]F_SEARCH=TRUE"/></entry></row>
+          <row><entry>Mobilix : Linux Mobile</entry><entry><ulink url="http://tuxmobil.org/"/></entry></row>
+          <row><entry>Linux on Laptops</entry><entry><ulink url="http://www.linux-on-laptops.com"/></entry></row>
+          <row><entry>Linux and Wireless</entry><entry><ulink url="http://linux-wlan.org/"/></entry></row>
+          <row><entry>Linmodems</entry><entry><ulink url="http://linmodems.org/"/></entry></row>
+          <row><entry>Notebook HQ: Linux Mobile</entry><entry><ulink url="http://www.linux-notebook.org/laptops/"/></entry></row>
+          <row><entry>Linux and Digital Cameras</entry><entry><ulink url="http://www.teaser.fr/~hfiguiere/linux/digicam.html"/></entry></row>
+          <row><entry>Developers Servers </entry><entry><ulink url="http://www.linuxmama.com/dev-server.html"/></entry></row>
+          <row><entry>IA-64 project leader Web site at Cern</entry><entry><ulink url="http://sverre.home.cern.ch/sverre/SJ.html"/></entry></row>
+          <row><entry>IA-64 Intel Web site</entry><entry><ulink url="http://developer.intel.com/design/itanium/index.htm"/></entry></row>
+          <row><entry>Medasys Linux</entry><entry><ulink url="http://www.medasys-digital-systems.fr/linux"/></entry></row>
+     </tbody>
+    </tgroup>
+  </table>
+  </para>
+</chapter>
+
