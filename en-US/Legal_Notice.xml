@@ -9,7 +9,14 @@
 ]>
 <legalnotice version="5.0" xml:lang="en-US" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>License</title>
-      <para>Copyright <trademark class="copyright"></trademark> &YEAR; &HOLDER;.</para>
-      <para>This HOWTO is a free documentation thanks to Medasys and HP for whom I do that job; you may copy, redistribute and/or modify it under the terms of the <emphasis>GNU Free Documentation License, Version 1.1</emphasis> or any later version published by the Free Software Foundation; with no Invariant Sections, Front-Cover Texts or Back-Cover Texts (the latest version is presently available at <link xlink:href="http://www.gnu.org/licenses/fdl.txt">http://www.gnu.org/licenses/fdl.txt</link>). This document is distributed hoping it will be useful, but <emphasis>without any guaranty</emphasis>; you're completely responsible of its use, and couldn't complain in case it doesn't work, or even if it breaks the hardware. All the software included in it, if not already copyrighted is released under the GPL. </para>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="SVG" fileref="./images/by-sa.svg"/>
+        </imageobject>
+        <imageobject>
+          <imagedata format="PNG" fileref="./images/by-sa.png"/>
+        </imageobject>
+      </mediaobject>
+      <para>This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <ulink url="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</ulink> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.</para>
 </legalnotice>
 

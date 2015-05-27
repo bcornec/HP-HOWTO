@@ -24,6 +24,10 @@
 		</imageobject>
 	</inlinemediaobject>
 	</orgname>
+        <copyright>
+          <year>&YEAR;</year>
+          <holder>&HOLDER;.</holder>
+        </copyright>
 	<xi:include href="Legal_Notice.xml" />
 	<xi:include href="Author_Group.xml" />
 </info>
