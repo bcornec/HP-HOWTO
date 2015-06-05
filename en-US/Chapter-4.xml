@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="sizing">
+    <title>Solutions and Sizing</title>
+    <para>This chapter proposes an help for sizing NetServers under Linux, depending on the different kind of use.</para>
+    <para>You have to consider that exercise as a bit perilous. Indeed, only the reality allows to test such previsions. Nevertheless, using the experience acquired by deploying solutions in the past, we can give some useful rules.</para>
+    <para>We may apply a certain number of rules valid for the sizing of classical Unix servers, considering that CISC systems (the majority in Linux environment) need 2.5 less times resources in memory than RISC systems, due to the fact that binaries used are smaller (Intel platforms are for the moment 32 bits architectures). This has also influences on disk and swap space.</para>
+    <para>It's obvious you have to consider, whatever the system, bottlenecks of the solution put in place, because they will determine the weakest link in the chain.</para>
+    <para>You have to look particularly at the following points:</para>
+    <itemizedlist spacing="compact" mark="bullet">
+      <listitem>
+        <para>The number and the speed of disks (the I/O rate of 10.000 rpm disks may go up to 20 MB/s, and 25 for 15.000 rpm disks),</para>
+      </listitem>
+      <listitem>
+        <para>The number and the speed of SCSI controlers (the I/O rate of Ultra2 LVD of the LC2000 - LH3/4/3000/6000 may go up to 80 MB/s, and latest B model up to 160 MB/s),</para>
+      </listitem>
+      <listitem>
+        <para>The addition of a supplementary SCSI card supported, when adding slow peripherals (DAT, DLT, CD writer ...) in order to avoid that the controler slow down in compatible mode, and that I/O performances drop significantly.</para>
+      </listitem>
+    </itemizedlist>
+    <para>You have also to be suspicious of the extensible functions of machines.
+Indeed, it's often better for a customer to add a new server, rather than to increase the capacities of the one in place. The first reason is a financial one, on one side, because the costs of add-ons on an already old system may be near those of a new system, whose prices are becoming cheaper and cheaper. And the same for maintenance. On the other hand, technically, it could be more interesting to benefit from the latest technologies to obtain a machine more equilibrate, powerful and to reuse the old one for secondary tasks (secondary DNS, ...) or to split processes from the other one. For example, when Ultra2 LVD was introduced, it was more interesting to buy a new server to benefit from the 80 MB/s SCSI bus speed, rather than to update a server which had 40 MB/s Ultra Wide SCSI. This implies that it's interesting to size correctly the server, from the begining, for the whole forseeable period of life of its use (typically 3 years nowadays).</para>
+    <para>In the same kind of ideas, you have to examine closely the choice between a bi-processors and two mono-processors machines. 2 different systems imply 2 disk controlers, 2 disks set, 2 separate RAM busses thus better performances, but more administration. On the other hand, a unique system renders it easier, allows for a quicker communication between processors, which could be necessary for certain applications, but makes the environment more fragile (more downtime in case of an hardware problem). In fact, there are more losses intrinsically on a multi-processor model, in communications at the system level. This question should mainly be considered for the addition of a processor (necesseraly obsolete) on a machine <emphasis>a posteriori</emphasis>, rather than to add a new server.</para>
+    <para>On memory aspects, Linux can manage today up to 64 GB in stable kernels. Linux takes the maximum from the memory you give to it, mainly by the constitution of a cache disk which improves greatly system performances. You may thus oversize the quantity of RAM installed, because it's preferable to a situation where the server would be forced to swap (which drop performances dramatically). The minimum RAM size provided on the NetServers (128 ou 256 MB) matches perfectly a normal use of a system, and doesn't need any particular addition. You have to take in account that there is no graphical environment used on production servers. Concerning the swap, under Linux, it comes in addition to the RAM to give the complete virtual memory available for the server. As a base rule, it's recommanded to give the same amount of swap space as the amount of RAM, to allow the system to put on disk nearly all the running processes in case of need. But the rule which exists for System V Unix (such as HP-UX) consisting of reserving twice the amount of RAM for swap isn't useful under Linux. You may note that Linux may swap certain inactive processes to free the maximum RAM possible. So having a system whose swap is partially used isn't necesseraly a proof of lack of memory, nor lack of performances.</para>
+    <para>You'll find below recommandations depending of the type of use made by the HP NetServer under Linux. It's possible to cumulate several functions on the same server. You'll take care to add at least in that case the resources needed to give the services.</para>
+    <para>Some generic rules have to be considered:
+    <itemizedlist spacing="compact" mark="bullet">
+      <listitem><para>We consider that the number of simultaneous users is the same as half the whole number of users on the server.</para></listitem>
+      <listitem><para>The minimal RAM size needed for a usable Linux server is 32 MB, which is less than the minimum amount of RAM available on the NetServers (128 MB). In case you use X-Window with KDE or Gnome on this machine, you need to have 64 MB in supplement, thus 96 MB as a minimum.</para></listitem>
+      <listitem><para>The minimal disk size needed for a usable Linux server is 2 GB, which is less than the minimum amount of disk available on the NetServers (9 GB).</para></listitem>
+      <listitem><para>In case of use of Raid 1, you have to double the amount of disk space useful to obtain the disk space needed. In case of use of Raid 5, you need to add 1 disk to obtain the disk space needed (up to 8 disks).</para></listitem>
+      <listitem><para>Except in particular cases (computing server), the amount of swap is the same as the amount of RAM.</para></listitem>
+      <listitem><para>The minimal processor needed for a usable Linux server is a Pentium 133, which is less than the minimum processor available on the NetServers (Pentium III 933).</para></listitem>
+      <listitem><para>Each X-Window user excuting a client on the server uses in average 2 MB.</para></listitem>
+      <listitem><para>It may be useful to add network cards in this type of machine to smooth the traffic, depending on the number of clients. Using the bonding option provided by the Linux kernel may also be very useful.</para></listitem></itemizedlist></para>
+    <para>You may also consult the linux performance tuning document provided by <ulink url="http://people.redhat.com/alikins/system_tuning.html">Adrian Likins</ulink>.</para>
+    <sect1>
+      <title>Linux as file and print server</title>
+      <sect2>
+        <title>Linux as file server</title>
+        <para>The sharing service uses 2 MB of RAM, and 2 more MB per share. In case of a unique share (users space for example), it leads to a 2 MB consumption per user. In the proposed case, we estimate that each user has 100 MB of disk space on the server, with an evolution to 200 MB 3 years later. Processor resources used are relativeley small, an entry level model will be sufficient from that point of view. We will priviledge the I/O speed with Ultra 3 LVD SCSI at 160 MB/s, if the budget allows it, and 15.000 RPM disks.</para>
+        <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+          <title>Sizing of a file server</title>
+          <tgroup cols="4" align="char" charoff="50">
+            <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+            <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+            <thead>
+              <row>
+                <entry>Simultaneous users</entry>
+                <entry>RAM size</entry>
+                <entry>Disk size</entry>
+                <entry>Machine example</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>1 - 100</entry>
+                <entry>312 MB</entry>
+                <entry>27 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>100 - 500</entry>
+                <entry>1 GB</entry>
+                <entry>117 GB</entry>
+                <entry>LC2000</entry>
+              </row>
+              <row>
+                <entry>500 - 1000</entry>
+                <entry>2 GB</entry>
+                <entry>216 GB</entry>
+                <entry>LH3000</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+      <sect2>
+        <title>Linux as print server</title>
+        <para>The sharing service uses 2 MB of RAM, and 2 more MB per printer shared. In case of a unique share (One printer per user typically), it leads to a 2 MB consumption per user.
+In the proposed case, we estimate that each user prints simultaneously files of 5 MB in average, thus we need to have that space available on the server.
+Processor resources used are relativeley small, an entry level model will be sufficient from that point of view.</para>
+        <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+          <title>Sizing of a print server</title>
+          <tgroup cols="4" align="char" charoff="50">
+            <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+            <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+            <thead>
+              <row>
+                <entry>Simultaneous users</entry>
+                <entry>RAM size</entry>
+                <entry>Disk size</entry>
+                <entry>Machine example</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>  1 -  100</entry>
+                <entry>312 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>100 -  500</entry>
+                <entry>1 GB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>500 - 1000</entry>
+                <entry>2 GB</entry>
+                <entry>9 GB</entry>
+                <entry>LC2000</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+    </sect1>
+    <sect1 xml:id="linux-intranet">
+      <title>Internet/Intranet Linux server</title>
+      <sect2>
+        <title>Web Server</title>
+        <para>The Web service uses 2.5 MB of RAM, in static mode (simple HTML pages) and 5 MB of RAM in dynamic mode (HTML pages generated from perl, PHP, ...) per user. The disk space needed is function of the nature of the server, knowing that most of the consumption comes from images. Processor resources used are important, thus it could be useful to consider the increase in frequency and the addition of processors, because this type of traffic could be quite well done in parallel. With Apache 2.0 and the support of threads, it will become even more obvious. We will priviledge also the I/O speed with Ultra 2 LVD SCSI at 80 MB/s, if the budget allows it, and 10.000 RPM disks.</para>
+        <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+          <title>Sizing of a static Web server</title>
+          <tgroup cols="4" align="char" charoff="50">
+            <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+            <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+            <thead>
+              <row>
+                <entry>Simultaneous users</entry>
+                <entry>RAM size</entry>
+                <entry>Disk size</entry>
+                <entry>Machine example</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>  1 -  100</entry>
+                <entry>256 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>100 -  500</entry>
+                <entry>1 GB</entry>
+                <entry>9 GB</entry>
+                <entry>LC2000 Bi-processor</entry>
+              </row>
+              <row>
+                <entry>500 - 1000</entry>
+                <entry>2 GB</entry>
+                <entry>9 GB</entry>
+                <entry>LH6000 Quadri-processor</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+          <title>Sizing of a dynamic Web server</title>
+          <tgroup cols="4" align="char" charoff="50">
+            <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+            <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+            <thead>
+              <row>
+                <entry>Simultaneous users</entry>
+                <entry>RAM size</entry>
+                <entry>Disk size</entry>
+                <entry>Machine example</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>  1 -  100</entry>
+                <entry>512 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>100 -  500</entry>
+                <entry>2 GB</entry>
+                <entry>9 GB</entry>
+                <entry>LC2000 Bi-processor</entry>
+              </row>
+              <row>
+                <entry>500 - 1000</entry>
+                <entry>4 GB</entry>
+                <entry>18 GB</entry>
+                <entry>LH6000 Quadri-processor</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+      <sect2>
+        <title>Mail Server</title>
+        <para>Generally, this machine is used as both SMTP (sending and reception of messages) and POP/IMAP server (keeper of messages and manager of client accesses). The SMTP Mail service uses 2 MB of RAM per user. The POP/IMAP Mail service uses 2 MB of RAM per user. The disk space needed becomes more and more important as long as attachments (images, various documents) take the greatest place in exchanges via e-mail. We consider in that case that an average mail box size is 50 MB. Processor resources used are important, thus it could be useful to consider the increase in frequency and the addition of processors, because this type of traffic could be quite well done in parallel.</para>
+        <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+          <title>Sizing of an e-mail server</title>
+          <tgroup cols="4" align="char" charoff="50">
+            <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+            <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+            <thead>
+              <row>
+                <entry>Simultaneous users</entry>
+                <entry>RAM size</entry>
+                <entry>Disk size</entry>
+                <entry>Machine example</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>  1 -  100</entry>
+                <entry>400 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>100 -  500</entry>
+                <entry>2 GB</entry>
+                <entry>27 GB</entry>
+                <entry>LC2000 Bi-processor</entry>
+              </row>
+              <row>
+                <entry>500 - 1000</entry>
+                <entry>4 GB</entry>
+                <entry>54 GB</entry>
+                <entry>LH6000 Quadri-processor</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+      <sect2>
+        <title>Firewall/Proxy/Web-Cache server</title>
+        <para>Generally, this machine is both a Firewall server, a proxy (in both directions) and a cache for the Web because all requests go through it. The Firewall service uses 1 MB of RAM. The Proxy service uses 0.3 MB per incoming relay. The Web cache service uses 0.5 MB per user. The disk space needed is function of the parameters of the cache Web server. In that case, we consider 20 MB per user. Processor resources used are important, due to the analysis of IP packets. Thus it could be useful to consider the increase in frequency.</para>
+        <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+          <title>Sizing of a Firewall/Proxy/Web-Cache server</title>
+          <tgroup cols="4" align="char" charoff="50">
+            <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+            <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+            <thead>
+              <row>
+                <entry>Simultaneous users</entry>
+                <entry>RAM size</entry>
+                <entry>Disk size</entry>
+                <entry>Machine example</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>  1 -  100</entry>
+                <entry>128 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>100 -  500</entry>
+                <entry>512 MB</entry>
+                <entry>18 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>500 - 1000</entry>
+                <entry>1 GB</entry>
+                <entry>27 GB</entry>
+                <entry>E800</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+      <sect2>
+        <title>Directory server</title>
+        <para>Generally, this machine use a software like <ulink url="http://www.openldap.org">OpenLDAP</ulink> to fulfill its goals. The LDAP service uses 1 MB of RAM and 10 kB of RAM per user. The disk space needed is of the same kind, so 10 kB per user. Processor resources used are moderated.</para>
+        <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+          <title>Sizing of a LDAP server</title>
+          <tgroup cols="4" align="char" charoff="50">
+            <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+            <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+            <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+            <thead>
+              <row>
+                <entry>Simultaneous users</entry>
+                <entry>RAM size</entry>
+                <entry>Disk size</entry>
+                <entry>Machine example</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>  1 -  100</entry>
+                <entry>64 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>100 -  500</entry>
+                <entry>64 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+              <row>
+                <entry>500 - 1000</entry>
+                <entry>128 MB</entry>
+                <entry>9 GB</entry>
+                <entry>E800</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+    </sect1>
+    <sect1 xml:id="linux-computing">
+      <title>Linux as computing server</title>
+      <para>Generally, this machine is extremely stressed, mainly on the processor and RAM aspects. Sometimes this is combined with intensive I/O needs. We thus equip such a machine with high-end processors (nowadays Pentium III Xeon) with the greatest level 2 cache possible (nowadays 2 MB). In RAM, we would tend to reach the maximum possible, thus 4 GB. For this type of server, we should adapt the swap such as it covers all the needs in memory required by the computing codes to execute. There is often no specific constraint on network performances, except in case of a computing cluster, in which case we may consider to equip the machines with 100 Mb/s cards with a switch between them, even with Myrinet, Dolphin or Gigabit products. Typically, a LP1000 2*PIII 1.4GHz 1 GB/2*9GB is the target of this type of server. The choice is extremely variable depending on the nature of the computation to do. We should underline that there are processors, such as PA-Risc, much more performant in floating point computation than today Intel processors (up to 6 times). The new IA-64 Itanium family seems also to bring a better compromise for price/performances for that environment.</para>
+      <para>This is by the way not the only approach as shown by the i-cluster project. Cf: <ulink url="http://www.hpl.hp.com/techreports/2001/HPL-2001-206.html"/>.</para>
+    </sect1>
+    <sect1 xml:id="linux-desktop">
+      <title>Linux as an office server</title>
+      <para>This kind of server is for the moment rare in the free software world. It's more frequent in Microsoft world, by association with <ulink url="http://www.citrix.com/products/metaframe.asp">Metaframe</ulink> solutions of <ulink url="http://www.citrix.com/">Citrix</ulink>. An office server needs 50 MB of RAM per user. Intrinsically, this machine has no requirements in term of disk, if it's not at the same time a file server. Processor resources used are important, thus it could be useful to consider the increase in frequency and the addition of processors, because this type of traffic could be quite well done in parallel.</para>
+      <para>Free/Open Source Software Solutions for an office server can be done using <ulink url="http://www.openoffice.org">OpenOffice.org</ulink>, <ulink url="http://www.ltsp.org">Linux Termnal Server Project</ulink> or <ulink url="http://plume.sf.net">Plume</ulink>.</para>
+      <table frame="all" colsep="0" rowsep="1" tocentry="1" shortentry="0" pgwide="1">
+        <title>Sizing of an office server</title>
+        <tgroup cols="4" align="char" charoff="50">
+          <colspec colnum="1" colwidth="8*" colsep="1" align="left"/>
+          <colspec colnum="2" colwidth="4*" colsep="1" align="left"/>
+          <colspec colnum="3" colwidth="4*" colsep="1" align="left"/>
+          <colspec colnum="4" colwidth="4*" colsep="1" align="left"/>
+          <thead>
+            <row>
+              <entry>Simultaneous users</entry>
+              <entry>RAM size</entry>
+              <entry>Disk size</entry>
+              <entry>Machine example</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>  1 -  10</entry>
+              <entry>512 MB</entry>
+              <entry>9 GB</entry>
+              <entry>E800</entry>
+            </row>
+            <row>
+              <entry>10 -  50</entry>
+              <entry>2 GB</entry>
+              <entry>9 GB</entry>
+              <entry>LC2000 Bi-processor</entry>
+            </row>
+            <row>
+              <entry>50 - 100</entry>
+              <entry>4 GB</entry>
+              <entry>18 GB</entry>
+              <entry>LH6000 Quadri-processor</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect1>
+</chapter>
+

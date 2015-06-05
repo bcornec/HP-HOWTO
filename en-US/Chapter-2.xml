@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="presentation">
+    <title>Presentation of Linux and Free Software</title>
+    <sect1>
+      <title>Some definitions</title>
+      <para>Before going into more details in the presentation, it could be useful to give some definitions of terms and software mentionned in that HOWTO.</para>
+      <sect2>
+        <title>Free Software or Open Source software</title>
+        <para>A <firstterm>free software (or Open Source software)</firstterm> is a software distributed with its source code, allowing its study, its transmission, its adaptation. The problem, in english, is the use of free, which has both meanings of "at no cost" and "without constraint". Here, it's the second use which has to be considered, hence the use of Open Source. To remember, think of free as speech, not beer.</para>
+        <para>Depending on the licenses used for its development, the constraints for users of such a software are various. The most open licenses (like the BSD one) allow code appropriation by third parties, including the resell of the resulting software (with or without modification) in commercial products, without any problem, and without owing something else to the originators than the mention of their copyright. Other licenses (like the GNU Public License or GPL) force every modified GPL software to be free GPL software itself ; this doesn't allow the use of such programs in a commercial one. Many other licenses exist, more or less open: the Artistic License (perl), the NPL one (mozilla), the QPL one (Qt) ...</para>
+        <para>A vast majority of free software is today under the GPL license, even if the BSD world takes always a great place, however less visible, mainly in the press. Linux is placed under the GPL. To have more information on these definitions and the licenses, please refer to the following reference sites:</para>
+        <variablelist>
+          <varlistentry>
+            <term>
+              <ulink url="http://www.gnu.org">GNU project Web site</ulink>
+            </term>
+            <listitem>
+              <para>You find there all information on the GNU project, including the licenses produced (GPL and LGPL) and various discussions on free software.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>
+              <ulink url="http://www.opensource.org">Open Source project Web site</ulink>
+            </term>
+            <listitem>
+              <para>This site proposes a new definition, a bit less restrictive, of free software - called here OpenSource Software - by well-known people.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <variablelist>
+          <varlistentry>
+            <term>
+              <ulink url="http://www.freebsd.org/">FreeBSD project Web site</ulink>
+            </term>
+            <listitem>
+              <para>Here are explained the advantages of the very open BSD license.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2>
+        <title>Examples and counter-examples</title>
+        <para>First of all, free software and <firstterm>freeware</firstterm> shouldn't be mixed up. A freeware is not necessarily a software provided with its sources, on the contrary of a free software. On the other side, on the contrary of a freeware, you may be charged to obtain a free software (it's not in contradiction with the license used). The ambiguity, as stated before, comes from the word <quote>free</quote>. A freeware is then free of charge, but not necessarily "free of sources". (As well, the <firstterm>shareware</firstterm> has nothing to do with free software).</para>
+        <para>So examples of important and well-known free software are the Linux and FreeBSD operating systems, the <ulink url="http://www.apache.org">Apache</ulink> Web server, the <ulink url="http://www.samba.org">SaMBa</ulink> SMB server, GNU C and C++ compilers ... 
+A contrario, examples of well-known freeware are the Internet Explorer browser, the Eudora Light mail reader, ...</para>
+      </sect2>
+      <sect2>
+        <title>Linux</title>
+        <para>Linux is a free operating system, superset of the POSIX norm. <quote>Linux</quote> points out the kernel alone. By extension, the name is also given to distributions based on that kernel plus a set of tools from the GNU project.</para>
+        <para>Linux is by consequence a Unix system, except that it doesn't use any proprietary code and is furnished under the GPL license, implying the availability of the sources. As every Unix system, Linux is multi-tasking and multi-user. It's also extremely portable, and it is available officialy today on processors such as Intel (i386 to Pentium IV and Itanium), Alpha, Motorola (680x0 and PowerPC), Sparc, StrongArm, Mips. Without mention of the ports, operational or in process on PalmPilot, superH, PA-Risc, Crusoe ...</para>
+        <para>The system is today perfectly stable and mature. Versions "x.y.z" of the Linux kernel, where "y" is an even number, are stable and only bug corrections are generaly applied when "z" increases. Versions "x.y.z" of the Linux kernel, where "y" is an odd number, are development versions which may be instable and are reserved to developers or intrepids.</para>
+        <para>From time to time, when the kernel development stabilizes a "freeze" is announced to furnish a new "stable" version (even), and the development goes on on a new version (odd).</para>
+        <para>The current stable version is the version 2.4.21 (this last number may evolve following the rythm of corrections).
+Development has on the other side begun again with a 2.5 version.</para>
+        <para>Numerous presentations of Linux are currently available. Among them, you should consult the one made by Michael Johnson at <ulink url="http://www.linuxdoc.org/HOWTO/INFO-SHEET.html"/>.</para>
+        <sect3>
+          <title>Linux technical characteristics</title>
+          <para>The system offers the following technical characteristics:</para>
+          <itemizedlist mark="bullet">
+            <listitem>
+              <para>Multi-tasking : executes several programs in pseudo-parallel.</para>
+            </listitem>
+            <listitem>
+              <para>Multi-users : many users acting on the same machine at the same time (without worrying on licenses).</para>
+            </listitem>
+            <listitem>
+              <para>Portable and interoperable : works on several hardware architectures. All the sources are available. Linux supports a lot of file systems, outside the native ext2: System V, BSD, Sun, MS-DOS, VFAT, NTFS, Mac, HPFS, EFS, ISO9660. On the network side, it supports the following protocols TCP/IP v4 and v6, Appletalk, Netware (client and server), Lan Manager SMB (client and server), X-Window, NFS, PPP, SLIP, UUCP.</para>
+            </listitem>
+            <listitem>
+              <para>Performant architecture : modular kernel, built at will, execution in protect mode on 80x86 processors, page load on demand, page share between executables when reading, virtual memory with swap on disk, use of a dynamical disk cache in memory, dynamic libraries, process management, pseudo terminals, virtual consoles.</para>
+            </listitem>
+            <listitem>
+              <para>Security : protection of memory between processes: one user program can't compromise the whole system operation. The kernel may also, on the other hand, filter network packets.</para>
+            </listitem>
+            <listitem>
+              <para>Respect of norms and standards : Posix, with System V and BSD extensions. Support of COFF and ELF binaries. Binary compatibility with SCO, SVR3/4 through the iBCS2 module. Native Language Support as well as national keyboards, fonts...</para>
+            </listitem>
+          </itemizedlist>
+        </sect3>
+      </sect2>
+    </sect1>
+    <sect1 xml:id="concepts">
+      <title>Free software concepts</title>
+      <para>Once the definitions are given, it is important to stay on at ideas promoted by the free software movement. It's important as well to clear some wrong ideas hawked on these software. This section gives then a various set of elements in favour of the introduction of free software and ends on the real problems remaining to solve.</para>
+      <sect2>
+        <title>Free software philosophy</title>
+        <para>In fact, the philosophy promoted by the free software movement is not that different from the one proposed by the scientific movement till a long time already: to put in common ideas and collective knowledge to allow the progression of the research and the growth of this knowledge. The knowledge of the human genome is one of the examples of such a collaborative work.</para>
+        <para>The computer engineering environment, and especially the software one, seems to have turn away till the last 20 years from these base concepts of the scientific world. It prefers on the contrary to keep the customer captive instead of giving him the information needed to exploit his computing environment the best he can. That's indeed following such a problem at the begining of the 80's that Richard Stallman, who was doing researches in artificial intelligence at the MIT, decided to create the GNU project. This project is the foundation of the current free software movement.</para>
+        <para>The main ideas promoted by this movement and stated by Richard Stallman himself are:</para>
+        <itemizedlist mark="bullet">
+          <listitem>
+            <para>Liberty: every user should be free to copy, diffuse, modify a program, either to share it with others, or to adapt it to his own needs. As well, he should be able to analyse it to understand, imitate, improve, verify its operations, as well as every scientific result is published and seen by the peers for verification, study, understanding and realisation of derived works. Could you imagine a vaccine against the liver cancer that another laboratory couldn't derive to make a vaccine against the pancres cancer. Of course, the negative impact of patents at that level is obvious.</para>
+          </listitem>
+          <listitem>
+            <para>Equality: every person should have the same rights on the software. Thus the provider isn't priviledged and can't keep customers to whom he furnished his work captive. Could you think that only the producer of our vaccine could use it ? With software patents, if you don't pay, you cannot use them (think to discussions around RANT and W3C standards).</para>
+          </listitem>
+          <listitem>
+            <para>Fraternity: this mode of working encourages the whole computer engineering community to cooperate and thus to produce software more and more reliable and useful to all. Could you imagine that a discovery like the vaccine above couldn't help everyone and favour other discoveries. Again with software patents, nothing like that is possible.</para>
+          </listitem>
+        </itemizedlist>
+        <para>More over the utopy of these ideas, we can find other reasons which allowed free software to spread so widely today. They are detailed in <xref linkend="choix"/>.</para>
+        <para>The free software movement materializes itself also through a community of people. That community, informal meeting of personnalities, is heterogeneous in its contents, actions, ideas, even if all share the same belief in the freedom of the software. That community created for itself the tools needed to its communication : Internet and Usenet. And these communication tools are based of course on a lot of free software to work. Among the outstanding persons of this movement, we can present:</para>
+        <itemizedlist mark="bullet">
+          <listitem>
+            <para><ulink url="http://www.cs.helsinki.fi/~torvalds/">Linus Torvalds</ulink>, conceptor of Linux.</para>
+          </listitem>
+          <listitem>
+            <para><ulink url="http://www.gnu.org/people/rms.html">Richard Stallman</ulink>, GNU project conceptor.</para>
+          </listitem>
+          <listitem>
+            <para><ulink url="http://www.catb.org/~esr">Eric S. Raymond</ulink>, writer of several and excellent articles, which inspired so many vocations.</para>
+          </listitem>
+          <listitem>
+            <para><ulink url="http://kiev.wall.org/~larry">Larry Wall</ulink>, author of Perl and of the patch tool, and philosopher.</para>
+          </listitem>
+          <listitem>
+            <para><ulink url="">Alan Cox</ulink>, mister "do everything".</para>
+          </listitem>
+          <listitem>
+            <para>Tim O'Reilly <email>ask_tim_at_oreilly.com</email>, free software advocate and editor of several books dedicated to them.</para>
+          </listitem>
+        </itemizedlist>
+        <para>All these personalities are, above all, excellent computer engineers, which allows them to be recognized as major actors of the free software movement. Their human and communication qualities are also strong characteristics of their nature. In any case they aren't considered for their power, but for their knowledge.</para>
+        <para>Of course, the free software community is built of thousands of programmers, whose complete list would be too tedious. All share the will of producing useful work, free, and to be recognized for their technical qualities above all.</para>
+      </sect2>
+      <sect2 xml:id="choix">
+        <title>The choice of free software</title>
+        <para>To use free software to bring solutions in a computing environment is a choice. First, it is in favour of a plurality of solutions, mainly in the personal computer world which tends to be monopolistic. Then, the choice is made, and that's what is finally important, on the own qualities of free software, which are detailed just below.</para>
+        <variablelist>
+          <varlistentry>
+            <term>Source code access</term>
+            <listitem>
+              <para>This point is the most important of the choice, because it allows the undestanding, adaptation, correction, distribution, improvement of the software.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Reliability</term>
+            <listitem>
+              <para>That quality is derived from the previous one: the free software is the combined result of the experience and the intelligence of all the participants. Its reliability increases then as time passes, with all the corrections which are made. More over, no marketing pression requires the software's producer to deliver it to its customers before it is in a satisfactory state.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Portability</term>
+            <listitem>
+              <para>This quality is not intrinsic to free software, but is very often seen in a free software. Indeed if a softawre meets success, it will necessarily be adapted to other environments than those initialy considered. Thus by increasing its disponibility, its portability and reliability are also increased. linux works today on a HP Jornada or IBM watch, as well as on s390 or SuperDome.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Universality</term>
+            <listitem>
+              <para>One essential quality of free software is the character naturaly universal of the data format used. Even if they don't follow standards, the availibility of the source code assures the user that he will understand them, and more over be able to write any filter needed to reuse these data or exchange them with other software. This allows also users to stabilize their environment, because they are not required to migrate due to incompatibility of data formats in their applications. Don't forget that your data are precious ans thet it's better to archive them under a *ML format (HTML, XML, SGML, ...) rather than a proprietary one.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Performance</term>
+            <listitem>
+              <para>Resulting from a lot of examinations, the use of algorithms coming from advanced research works, as well as tested by various usages, free software have good performances by nature. Frequently large portions of code are rewritten to allow the reuse of the original ideas with a better code and thus to increase performances. Several tests made by various organisms tend to prove it also.</para>
+              <table frame="none" colsep="0" rowsep="0" tocentry="0" shortentry="0" orient="land" pgwide="1">
+                <title>Performances of Free Software</title>
+                <tgroup cols="2" align="char" charoff="50">
+                  <colspec colnum="1" colwidth="2*" colsep="0" align="left"/>
+                  <colspec colnum="2" colwidth="4*" colsep="0" align="left"/>
+                  <thead>
+                    <row>
+                      <entry>Subject</entry>
+                      <entry>URL</entry>
+                    </row>
+                  </thead>
+                  <tbody>
+                    <row>
+                      <entry><ulink url="http://www.apache.org">Apache</ulink> Web Server and competitors</entry>
+                      <entry>
+                        <ulink url="http://www5.zdnet.com/products/content/pcmg/1709/305867.html"/>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry>SMB <ulink url="http://www.samba.org">SaMBa</ulink> server vs Windows NT</entry>
+                      <entry>
+                        <ulink url="http://www.zdnet.com/sr/stories/news/0,4538,2196106,00.html"/>
+                      </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <para>Once more, there is no obligation to diffuse an application whose performances would be bad.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Interoperability</term>
+            <listitem>
+              <para>Interoperability is a reality of today's enterprises. Historically, Unix environment was always a ferment for interoperability with other systems (big or medium size systems, as well as personal computers). The support in Linux, for example, of a lot of network protocols, filesystem formats, and even binary compatibility modes assures a good interoperability. By the way, interoperability requires 2 actors, and having only one open is generally not sufficient. That's the goal of having RFCs, norms, standards, ...</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Reactivity</term>
+            <listitem>
+              <para>When considering the more and more longer development cycles of the software editors, the reactivity brought by the free software movement is interesting for a lot of sites, concerned by the rapid obtention of corrections to a given problem. Thus, during the recent discoveries of IP problems (ping of the death,...), patches were always available within the next 3 days. And above that, only the patch correcting the hole found was delivered. There were no functionality added, which could have create other instabilities.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>Security</term>
+            <listitem>
+              <para>The best computing security possible is ensured by a robust construction, public and reknown algorithms, a quick communication around flaws, ... In other words by transparency. Obscurity is in this domain bad, useless and even dangerous. In the free software world, the reactivity described in the previous paragraph is a garanty of increased security, ... at the condition that patches are applied regularly.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <para>Independantly of its qualities, it's possible to give other reasons of various nature, in favor of free software, depending on the type of the person met.</para>
+        <sect3>
+          <title>Marketing argumentation</title>
+          <para>Studies from IDC bring to light the irresistible rise of Linux as a server operating system. In 1998, Linux is credited with 17% of market share, with an increase of 212%, which is the most important in that domain. The following graphics give the whole market share repartition.</para>
+            <figure float="0" xml:id="idc1998">
+              <title>Server operating system repartition in 1998 (IDC).</title>
+              <graphic fileref="./images/idc1998.png" width="20cm" align="center" scale="75"/>
+            </figure>
+          <para>This was confirmed in 1999 with a market share climbing to 24% and an ancrease of 93%, always more than four times the increase of the follower.</para>
+          <figure float="0" xml:id="idc1999"><title>Server operating system repartition in 1999 (IDC).</title>
+            <graphic fileref="./images/idc1999.png" width="20cm" align="center" scale="75"/>
+          </figure>
+          <para>Dataquest <ulink url="http://gartner6.gartnerweb.com/dq/static/about/press/pr-b9939.html">estimates</ulink> on its side that Linux servers will represent, with 1.1 million of units, 14% of the servers sold in 2003.</para>
+          <para>The Net itself produces marketing tools to demonstrate the superiority of free software. Counters are regularly updated by <ulink url="http://www.netcraft.com/survey/">Netcraft</ulink> and others, on web server software, and another was done by <ulink url="http://www.leb.net/hzo/ioscount/index.html">IOS Counter</ulink> for the servers on Internet. Results, reproduced below, show the importance taken by 
+<ulink url="http://www.apache.org">Apache</ulink> with more than 16 millions of operational sites (among them 30% run Linux), crushing the competition, as well as the free operating systems Linux and *BSD which dominate the world of Internet servers.</para>
+         <figure float="0" xml:id="netcraft"><title>Web server software by Netcraft between 1995 and 2001.</title><graphic fileref="./images/netcraft.png" scale="70"/></figure>
+<figure float="0" xml:id="ioscounter"><title>Repartition of Internet servers by IOS Counter in April 1999.</title><graphic fileref="./images/ioscounter.png" align="center" scale="50"/></figure>
+          <para>A detailed explanation based on the most precise numbered results is also regularly updated, showing the advantages to use free and open source software, Cf: <ulink url="http://www.dwheeler.com/oss_fs_why.html"/>.</para>
+        </sect3>
+        <sect3>
+          <title>Financial argumentation</title>
+          <para>Financial factors also speak for free software. And first the price to aquire them is low. Low, because it's never zero.
+Even if you can find it on the Internet, you have to consider the costs related to that link. However costs are greatly less expensive than for commercial software. So a RedHat 9 Linux distribution, delivered with more than 1400 software packages, costs about 60 USD when you have to pay more than 800 USD to obtain Windows 2003 server, delivered only with IIS.</para>
+          <para>On the other side, free software don't have the notion of license by user or by supplmentary service. Thus there is no additional cost when you have to increase the use of these software in your entity. That's of course not the case with commercial software whose economical logic is often based on the number of licenses.</para>
+          <para>Free software bring in addition a better mastering of the TCO (Total Cost of Ownership), mentionned so frequently in the massive deployment of personal computers. Thus administration costs are reduced because systems like Linux or FreeBSD, as Unix, are managed completely remotely, either through command line orders (with <command moreinfo="none">telnet</command> or <command moreinfo="none">ssh</command>) or in graphical mode by using X-Window. More over, we benefit from a true multi-users mode, improving these management operations.
+Always in this domain, it's also possible to do remote management, either through the own hardware capacities of the machine (as the Remote Assistant card integrated in most HP NetServers or Prliant servers with the RILO card), or by doing a remote connexion (through modem, ISDN adapter or a permanent link) thanks to the native PPP protocol and secure connexion systems as tunneling or ssh. This managemnt could even be realised by an external entity, in outsourcing.</para>
+          <para>At last, the costs due to the hardware themselves could be controled; on one side, if by chance free software don't meet the needs, it's always possible to buy then commercial software solutions to cover the rest on the same hardware. On the other side, solutions based on free software have good performances by nature, and can use hardware platforms which would be considered as obsolete, if installed following the standard criterias of other operating systems or applications. The fact to separate the graphical interface from the rest of the working system is here key. It's so possible to use "old" hardware, mainly to model. It's then possible to invest, with a fine knowledge, when puting the solution in operation, if needed. The power increase may naturaly take place progressively.</para>
+        </sect3>
+        <sect3>
+          <title>Technical argumentation</title>
+          <para>This argumentation was already given in the previous sections. I think nevertheless that some notions may be explained with complementary information.</para>
+          <para>So concerning the reliability aspects of free software based solutions, it's important to note that it implies an operational running time very high (standard characteristic of Unix systems in general). This is mesured by the command <command moreinfo="none">uptime</command>. One of Medasys and HP customers, Saint-Michel Hospital in Paris, has a Vectra VL5 acting as router under Linux since more than 300 days. And that's not a isolated case.</para>
+          <para>Respect of standards and norms, as well as the extreme portability of free software assures also to applications developed on these platforms the same qualities. And notably, if after their use, the performances or services brought by free software based architectures were insufficient (it may be caused by architecture problems such as PCI bandwidth, number of processors available, ...), it would be easy to migrate to machines offering more performances and capacities of evolution, as the HP 9000 systems, running HP-UX.</para>
+          <para>At last a development plan centered around performances implies a modularity, such as it's possible to resize the system kernel nearest to the capacities of the hardware or to use dynamically loaded modules following the needs. A packages installation may vary from 40 MB for a minimal system up to many GB for a complete distribution. The system linearity allow also the support of multi-processors machines (SMP) (tested up to 32 processors on a Sparc machine). The system modularity allows also to obtain an operational system on a 1.44 MB floppy disk, either to realize a minimal repair environment, or to provide a perfectly operational router. The world of embedded systems shows besides more and more interest for systems such as Linux, because above it's modularity, source availability makes communication with dedicated peripherals easier (acquisition cards, sonde, ...). Entities as CERN or Thomson already use such solutions.</para>
+        </sect3>
+        <sect3>
+          <title>Solutions argumentation</title>
+          <para>That argumentation is probably the most important of all, because it's useless to have free software if it's not to make something useful with it or to offer solutions to demands of entities willing to use it. In which sectors free softawre may bring solutions today ? Well, you have to admit it's in nearly all the sectors of enterprise computing.</para>
+          <para>Historically, Open Source Software were used to realise Internet/Intranet servers, because their growth was following the one of the Net. It's so possible to cover all aspects linked to the Internet, from the Web server (<ulink url="http://www.apache.org">Apache</ulink>), FTP server (<ulink url="http://www.landfield.com/wu-ftpd">Wu-Ftpd</ulink>), DNS server (<ulink url="http://www.isc.org/bind.html">Bind</ulink>), the E-Mail server (<ulink url="http://www.sendmail.org">Sendmail</ulink> or <ulink url="http://www.postfix.org">PostFix</ulink>), the Usenet groups server (<ulink url="http://www.isc.org/inn.html">INN</ulink>), the proxy server (<ulink url="http://juanjox.linuxhq.com/">IPmasqadm</ulink>), the firewall (<ulink url="http://www.rustcorp.com/linux/ipchains/">IPChains</ulink> or <ulink url="http://netfilter.samba.org">IPTables</ulink>), Virtual Private Network (<ulink url="http://www.openssh.com/">OpenSSH</ulink>), the Cache server for the Web (<ulink url="http://squid.nlanr.net/Squid/">Squid</ulink>) or also the Time server (<ulink url="http://www.eecis.udel.edu/~ntp">NTP</ulink>) or as directory service(<ulink url="http://www.openldap.org">LDAP</ulink>) server, or as content management(<ulink url="http://www.midgard.org">Midgard</ulink>) server... All these software are available in standard in a Linux distribution. The client computer should be equiped with the software corresponding to the application used (mail reader, news reader, web browser, ...) whatever its operating system. The choice of the client is free, as all these tools respect the standards decreed in the <ulink url="ftp://ftp.lip6.fr/pub/rfc">RFCs</ulink>.</para>
+          <para>The second preferential domain for free software is the file and print server domain. For these services, clients may be multiple: Unix type (use of <ulink url="ftp://ftp.mathematik.th-darmstadt.de/pub/linux/okir">NFS</ulink> and <ulink url="ftp://ftp.kernel.org/pub/linux/devel/gcc/">KNFS</ulink> or also <ulink url="http://www.coda.cs.cmu.edu">Coda</ulink> and <ulink url="http://www.inter-mezzo.org">Inter-Mezzo</ulink>, for file sharing and of <command moreinfo="none">lpd</command> or <ulink url="http://www.cups.org">CUPS</ulink> for print service), Microsoft Windows type (use of <ulink url="http://www.samba.org">SaMBa</ulink>, which allows also the use of local client printers), Novell type (use of <ulink url="http://www.compu-art.de/mars_nwe">Mars_nwe</ulink>) or MacIntosh type (use of <ulink url="http://www.umich.edu/~rsug/netatalk">NetAtalk</ulink>). All these software are provided in standard in a Linux distribution and don't need any modification at the client level to work.</para>
+          <para>The other domains where a system such as Linux may bring solutions is the computation one, with support of <ulink url="http://www.irisa.fr/prive/mentre/smp-faq/">multiprocessor</ulink>, linked to the realisation of <ulink url="http://hp-linux.cern.ch/">clusters with multiple nodes</ulink> with <ulink url="http://www.mosix.org">Mosix</ulink> or <ulink url="http://www.linuxdoc.org/HOWTO/Beowulf-HOWTO.html">BeoWulf</ulink> with high-speed network interfaces (100 Mbit/s, <ulink url="http://cesdis.gsfc.nasa.gov/linux/drivers/index.html#gigabit">Gigabit</ulink> or <ulink url="http://lhpca.univ-lyon1.fr/myri.html">Myrinet</ulink>); those of data security with the support of HP NetRaid<superscript><link linkend="netraid">Rem.</link></superscript> cards, allowing Raid level of 0, 1, 3, 5, 10, 50, and HotSpare disks, managed by the harware; those of centralized fax server, with a free software like <ulink url="http://www.hylafax.org">HylaFAX</ulink> or also as an archive/backup server with HP SureStore DAT or DLT libraries thanks to a GPL software like <ulink url="http://www.amanda.org">Amanda</ulink> or a commercial one like <ulink url="http://www.arkeia.com">Arkeia</ulink> or at last as a database server with free solutions like <ulink url="http://www.postgreSQL.org/">PostgreSQL</ulink>,<ulink url="http://www.mysql.org/">MySQL</ulink> or commercial like <ulink url="http://platforms.oracle.com/linux/index_lin.htm">Oracle</ulink>, to speak only of these three.</para>
+          <para>On the client side, even if it's less highlighted for the moment, possibilities to use solutions based on free or commercial software are numerous. Here also the Internet part is the main one, with tools like graphical web browsers (<ulink url="ftp://ftp.netscape.com/pub/communicator/">Netscape</ulink>, <ulink url="http://www.mozilla.org">Mozilla</ulink> [with <ulink url="http://www.xulplanet.com/ndeakin/arts/reasons.html">101</ulink>  good reasons in its favor] or <ulink url="http://www.konqueror.org">Konqueror</ulink>) or textual (<ulink url="http://www.cc.ukans.edu/about_lynx/about_lynx.html">lynx</ulink> or <ulink url="http://www.w3m.org">w3m</ulink>), a lot of graphical mail readers (<ulink url="http://www.geocities.com/SiliconValley/6702/kmail.html">Kmail</ulink>, <ulink url="http://burka.netvision.net.il/xfmail/xfmail.html">XFMail</ulink>, ...) or textual (<ulink url="http://www.mutt.org/">mutt</ulink>, <ulink url="ftp://ftp.uu.net/networking/mail/elm">elm</ulink>, ...). But you also have the whole panel of indispensable tools for a personal computer today as a PDF reader (<ulink url="http://www.adobe.com/supportservice/custsupport/LIBRARY/acrunix.htm">Acrobat Reader</ulink> or <ulink url="http://www.foolabs.com/xpdf/">xpdf</ulink>), image manipulation tools (<ulink url="http://www.wizards.dupont.com/cristy/ImageMagick.html">ImageMagick</ulink>, <ulink url="http://www.gimp.org/">the Gimp</ulink>, <ulink url="http://www.real.com/products/player/downloadrealplayer.html?wp=dl0899[amp   ]src=dlbutton_all[lang  ]=en#form">RealPlayer tools</ulink> ...), word processors (<ulink url="http://www.lyx.org">LyX</ulink>, <ulink url="http://www.latex-project.org">LaTeX</ulink>, <ulink url="http://www.sgmltools.org">SGMLTools</ulink>, <ulink url="http://linux.corel.com/linuxproducts_wp8.htm">Wordperfect</ulink>, ...), commercial office suites (<ulink url="http://www.applix.com/applixware/linux/main.cfm">ApplixWare</ulink>, <ulink url="http://www.stardivision.com/office/so5linux_body.html">StarOffice</ulink>), or opensource (<ulink url="http://koffice.kde.org">Koffice</ulink>, <ulink url="http://www.openoffice.org">OpenOffice.org</ulink>, ...), sound management tools (<ulink url="http://www.xmms.org">Xmms</ulink>, <ulink url="http://www.ueda.info.waseda.ac.jp/%7Esatoshi/midi/midi-e.html">eplaymidi</ulink>, <ulink url="http://metalab.unc.edu/tkan/xmcd">xmcd</ulink>, ...), CD burning tools (<ulink url="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html">cdrecord</ulink>, <ulink url="http://sunsite.auc.dk/BurnIT/">BurnIT</ulink>, ... with complements as <ulink url="http://www.ge.ucl.ac.uk/~jcpearso/mkisofs.html">mkisofs</ulink>, <ulink url="http://www.xiph.org/paranoia/">cdparanoia</ulink>, <ulink url="http://sourceforge.net/projects/cdrdao/">cdrdao</ulink>), free and commercial emulators for various systems (<ulink url="http://www.winehq.com/">Wine</ulink>, <ulink url="http://www.ardi.com/">Executor</ulink>, <ulink url="http://www.calderasystems.com/doc/wabi/wabi.html">WABI</ulink>, <ulink url="http://www.dosemu.org">DOSEmu</ulink>,<ulink url="http://www.netraverse.com/products/win4lin30">Win4Lin</ulink>, <ulink url="http://www.wmware.com">VmWare</ulink>...), compilers and interpretors for all the languages (<ulink url="http://www.gnu.org/software/gcc/gcc.html">C</ulink>, <ulink url="http://www.gnu.org/software/gcc/gcc.html">C++</ulink>, <ulink url="http://agnes.dida.physik.uni-essen.de/~gnu-pascal/">Pascal</ulink>, <ulink url="http://www.gnu.org/software/fortran/fortran.html">Fortran</ulink>, <ulink url="http://freshmeat.net/projects/x11-basic/">Basic</ulink>, <ulink url="http://www.scriptics.com/products/tcltk/">Tcl/Tk</ulink>, <ulink url="http://www.perl.com/">Perl</ulink>, <ulink url="http://www.python.org/">Python</ulink>, <ulink url="http://www.adahome.com/Resources/Compilers/GNAT.html">Ada</ulink>, <ulink url="http://www.loria.fr/projets/SmallEiffel/">Eiffel</ulink>, <ulink url="http://clisp.cons.org/~haible/clisp.html">Lisp</ulink>, <ulink url="http://www.scheme.org/">Scheme</ulink>, <ulink url="http://www.gnu.org/software/prolog/prolog.html">Prolog</ulink>...), including commercial versions (<ulink url="http://www.pgroup.com/prod_description.html"> PGI</ulink>, <ulink url="http://www.intel.com/software/products/compilers/">Intel</ulink>...), graphical environments (<ulink url="http://www.gnome.org">Gnome</ulink>, <ulink url="http://www.kde.org">KDE</ulink>, <ulink url="http://www.opengroup.org/desktop/">Motif</ulink>, <ulink url="http://www.openmotif.org">OpenMotif</ulink>, ...). The evolution of these last tools indicates that the 2000's may be the years where Linux and free software will break through at their turn on the client.</para>
+          <para>We should note that the completeness of Linux distributions increases continuously in order to make them able to cover more and more computing solutions. A <ulink url="http://people.debian.org/~jgb/debian-counting">recent study</ulink> on the Debian distribution showed that investment should have been of 2 billions euro in order to develop its 55 millions of code!</para>
+          <para>I want to mention that this document was realised on an HP Brio BAx, then on a Vectra VL400 equiped only with a Linux distribution, with the help of tools like <ulink url="http://sourceforge.net/projects/docbook">DSSSL style sheet</ulink>, <ulink url="http://www.netfolder.com/DSSSL/index.html">OpenJade</ulink> and <ulink url="http://www.oasis-open.org/docbook/">DocBook</ulink>, <ulink url="http://www.vim.org">ViM</ulink> which allowed to generate from a single source the formats HTML, Txt, RTF, PostScript, and PDF.</para>
+        </sect3>
+        <sect3 xml:id="service">
+          <title>Service argumentation</title>
+          <para>This one was for a long time a blocking point to the expansion of free software in the firms. It's not the case today. Many service providers or hardware manufacturers, like HP, control today these solutions and propose support around them, uoto missions critical if requested.</para>
+          <para xml:id="newsgroups">Other sources of information are also available, in abundance, through several web sites dedicated to these solutions, specialised mailing-lists, and various Usenet groups, such as for Linux, the international groups under <command moreinfo="none">comp.os.linux.*</command> or for the french speaking people under <command moreinfo="none">fr.comp.os.linux.*</command>.</para>
+          <para>Concerning competences, more and more young engineers or academics finish their learning cycle being trained to the use of free applications and operating systems. This wealth of competences arrives now on the labour market and will contribute to increase the movement of generalisation of these tools. At last, many firms have internaly ignored competences. In fact, their employees often install this software at home, and have a good mastering, usable when arrives the deployment of the software in their professional structure.</para>
+        </sect3>
+      </sect2>
+      <sect2>
+        <title>Wrong ideas on free software</title>
+        <para>Advocating free software consists also to mention some generally accepted ideas concerning them and to fight them.</para>
+        <variablelist>
+          <varlistentry>
+            <term>
+              <emphasis>"There is no support, no training"</emphasis>
+            </term>
+            <listitem>
+              <para>As seen previously, support is currently structuring itself. A firm like <ulink url="http://www.redhat.com">RedHat</ulink> provides today support for their solutions. Only in France, we may mention firms like <ulink url="http://www.medasys.fr">Medasys</ulink>, <ulink url="http://www.atrid.fr">Atrid</ulink>, <ulink url="http://www.alcove.fr">Alcove</ulink> which assure support on free software. Likewise, always in France, training on free software may be given by <ulink url="http://www.france.hp.com/formation">HP France</ulink>, <ulink url="http://www.learningtree.com/fr/index.htm">Learning Tree</ulink>, the <ulink url="http://form-continue.iut-velizy.uvsq.fr/">IUT de Vélizy</ulink>, without mentioning generic network and Unix trainings (besides proposed also by the same organizations) which represent a fundamental base in a training course. And at last, we should mention the ability of each of us to self-train, mainly thanks to the huge documentation available (See the <xref linkend="references"/>).</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>
+              <emphasis>"There is no documentation"</emphasis>
+            </term>
+            <listitem>
+              <para>There is a whole set of manuals, the <ulink url="http://www.linuxdoc.org">Linux Documentation Project</ulink>, made of FAQ (Frequently Asked Questions) and HOWTO, counting more than 300 documents around Linux, the main being <ulink url="http://www.traduc.org">translated in french</ulink>, and <ulink url="ftp://ftp.linet.gr.jp:/pub/howto-translations">in japanese</ulink> available as free documentation. This documentation has a various quality, more or less up to date, following the subjects, certainly but it makes a corpus allowing to apprehend alone a Linux distribution and all its components. For myself, I always found in it everything I needed to do my job with free software. And, in case of complementary information, a lot of web sites and Usenet groups may again bring some of the elements needed. And without counting the innumerable manual pages available on line. Each distribution comes also with a comprehensive set of manual covering all the tasks of installing, handling and managing them.</para>
+              <para>On the other side, the editors <ulink url="http://www.editions-oreilly.fr">O'Reilly</ulink> and <ulink url="http://www.ssc.com">SSC</ulink> have specialised in providing books around free software, written generaly by the writers of the software themselves. Their books are considered as reference books in their respective domains.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>
+              <emphasis>"A free or nearly free product is a toy"</emphasis>
+            </term>
+            <listitem>
+              <para>You should always make a difference between free (as speech) and free (as beer). Too many freeware in Microsoft environment are in fact toys and of poor quality. It's absolutely not the case for free software, as stated in the previous sections. Remember just that they are reliable by construction.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>
+              <emphasis>"Linux is difficult to install"</emphasis>
+            </term>
+            <listitem>
+              <para>Linux is a professional operating system. At that title, it requires competences to install it, as well as any other professional operating system, like the other Unix or Windows NT for example. But it isn't more difficult to install than those either, mainly thanks to distributions as RedHat, Mandrake, ... You need about 30 minutes to realize a complete installation of such distributions, so quite the same as for HP-UX and noticeably less than for Windows NT Server.</para>
+              <para>On the other hand, as before installing a server with Windows NT you have to verify its compatibility with the <ulink url="http://www.microsoft.com/HCL">Hardware Compatibility List</ulink> of Microsoft, for Linux it's also greatly recommended to verify the <ulink url="http://www.linuxdoc.org/HOWTO/Hardware-HOWTO.html">Hardware HOWTO</ulink>, and for HP machines to refer to <xref linkend="hp-hardware"/>.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>
+              <emphasis>"Free Software are not adequate for heavy tasks"</emphasis>
+            </term>
+            <listitem>
+              <para>This is less and less true and this criticism has been obsoleted with the latest versions of the Linux kernel which will include a journalised filesystem, allowing a true application cluster. But already Linux authorises the use of multi-processors, several nodes to realise computation clusters. And don't forget it's used by the portal <ulink url="http://www.voila.fr">Voila</ulink> (France Telecom)  or the engine <ulink url="http://www.google.com">Google</ulink> among other prestigious references. As well, FreeBSD is used with success as the world biggest ftp server: <ulink url="ftp://ftp.cdrom.com">Walnut Creek CDROM server</ulink>. Useful projects to consult in this area of high availability are <ulink url="http://www.linux-vs.org"/>, <ulink url="http://www.opengfs.org"/> and <ulink url="http://www.linux-ha.org"/></para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>
+              <emphasis>"What appeal do I have in case of problem with the editors ?"</emphasis>
+            </term>
+            <listitem>
+              <para>There is no appeal, because software licences deny all responsabilities for the writers, in case of problem. But, in reality developers are always ready to help in case of problem and try to correct as soon as possible the bugs encountered (for the F00F bug of the pentium, a patch for the Linux kernel was published within 3 days, for example). On the other side, commercial editors guarantee very badly users against problems other than packaging errors. Please read the notes furnished with your software to judge.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2>
+        <title>Real problems around free software</title>
+        <para>It would not be honest to negate certain remaining problems linked to free software. Some have begun to disappear, other are inherent to the system, other at last will take time to diappear.</para>
+        <para>The first problem, inherent to the model of free software, is the multiplicity of tools and distributions available. So, if you want to setup a mail server, you have to choose between Sendmail, Exim, PostFix, Qmail, Smail. As well if you want to install Linux, you may choose between the distributions <ulink url="http://www.redhat.com">RedHat</ulink>, <ulink url="http://www.suse.de">SuSE</ulink>, <ulink url="http://www.slackware.com">Slackware</ulink>, <ulink url="http://www.linux-mandrake.com/en">Mandrake</ulink>, <ulink url="http://www.turbolinux.com">Turbo Linux</ulink>, <ulink url="http://www.debian.org">Debian</ulink>. This represents often a problem for the newcomer, but the esperienced user will always prefer to have a large choice he will confront to his particularities and to his experience. As long as an actor respects the rules by freeing his code (it's the case of the rpm and deb formats for example), there is little risk from the comunity point of view. The key point is that the choice is made only taking in account technical criterias.</para>
+        <para>The second problem, inherent also to the free software birth, is the necessity to have strong Unix and Internet competences, to manage such solutions. The power available through these systems is proportional to the competence of their administrators. And that will stay true even with the growth of more and more grahical solutions to manage them. On the other side, you capitalize the investment in time to learn their functions and that doesn't disappear, because you don't have to re-learn eveything from one version to the other (I use the same editor, vi, for the last 15 years). Don't forget that systems you use daily seem to be simple, uniquely because you passed enough time to learn them. For Internet competences, it's a statement of the obvious to say that this investment isn't lost. At last, even with the work of translators to provide information in french and other languages, a good knowledge in technical english is definitively a plus.</para>
+        <para>The last problem met in the implementation of free software solutions is to suceed in convincing some managers to go against the prevailing opinion. The aim of this chapter is precisely to give all sorts of argumentations to achieve that goal, but you need each time to show conviction to get his way in the end. As soon as these solutions will be adopted by big firms principaly, resistances will disappear.</para>
+      </sect2>
+    </sect1>
+    <sect1 xml:id="linux-vs-os">
+      <title>Linux and other operating systems</title>
+      <para>The aim is not to examine completely or to compare the functions of the various operating systems available. It's more upon looking at the respective positions of Linux in comparison with other systems. Only systems having a sufficient representation on the market are considered.</para>
+      <sect2>
+        <title>Linux and  other proprietary Unix (HP-UX, Tru64, AIX, Solaris, Irix)</title>
+        <para>The situation taken by all the hardware manufacturers places Linux today in the entry level (when it's taken in account) and their own Unix system in the middle and high level. Reality is sometimes more cruel than the situation wanted by the marketing department :-). Technically, a Linux distribution has no cause to be envious of the manufacturers Unix solutions, except for the moment the set of commercial applications and some high-end hardware configuration support. And we can often see that users dope their Unix workstations with free software to complete their usage.</para>
+        <para>To be precise in the talk, we should consider manufacturers Unix solutions as split in stations and servers.</para>
+        <para>On the station side, there's no doubt in my mind: for a customer, the only reason today to buy one is linked to the availability of a software or a hardware which wouldn't exist in the free environment, or due to intrinsic performances of the machine. In the first case, we can see that this argument should have a short life time, because logically every software editor (except maybe hardware manufacturers) and every hardware manufacturer has interest in porting their applications or allowing the use of their hardware on all the major environments in the market. As shown by Oracle, Informix, Sybase, ... Linux becomes today one of the major environments. In the second case, the difference in term of performances between the Linux dominant platform (IA-32) and the other competitors decreases and will disappear with the generalisation of the IA-64 architecture, which seems to be adopted largely by a majority of actors. More over, Linux is often available natively on the processors of these actors (Sparc, Mips, PowerPC, 68xxx, Alpha, Crusoe, PA-Risc, Itanium). I think Linux may represent the famous unique and standard Unix that everybody dreamed of from a long time, without succeeding to impose it (the open and free characteristics brought by Linux are not without influence on that). I think that at the end hardware manufacturer Unix workstations will be restricted to some niches such as high end computation, virtual reality, ... and that as long as solutions are not available on a free environment. Linux offers all the functional qualities of the other Unix systems, and thus of the workstation, on a more various hardware platform and potentially at a better price, if on PCs. So it is the natural choice of every computer engineer with a strong Unix culture (old customer of the workstation) who will prefer that solution to the migration to a Microsoft system typically. With IA-64, we can see that Linux was the first operating system available (including graphical support).</para>
+        <para>On the server side, in addtion to the points mentionned previously for the stations, problems are more complex. Ram, disks, processors capacities, extensions of every kind make them difficultly repleacable by machines with a IA-32 architecture for example. More over, certain solutions such as high availability clusters for example have just been put in production in a Linux environment, compared to years of operation under Unix. The other brake is often linked to investments already done around software solutions deployed on these servers. Whatever their natural life time is much higher than those of the stations. Changes will thus be made more slowly in that domain. Here we can consider rightly Linux solutions as an entry/middle level solutions, when hardware manufacturer Unix servers are the middle/high level. The introduction of Linux in place of these machines will begin only with a massive availability of applications, mainly in the management sector. Again IA-64, with increased SMP capabilities (16 processors today), higher bandwidth, ... will make things change.</para>
+        <para>The advantages of the hardware manufacturer solutions, explaining why they are so often chosen when applications are critical, are linked to the homogeneity of the solution (hardware and software mastered by the same entity, which can't invoke a third party in case of problem), and to the support and maintenance guarantees furnished.</para>
+        <para>Finally, there is not so much antagonism between these systems, because they are full cousins. Their association allows today to computer teams "pro-Unix" to have solutions from start to finish, without having to lose in functions, as it's so often the case with other operating systems available for personal computers.</para>
+      </sect2>
+      <sect2>
+        <title>Linux and SCO/Caldera</title>
+        <para>The comparison between Linux and the SCO systems seems to me quite unbalanced. First, all the previous points are vaild here also. More over, SCO isn't a hardware manufacturer, so the homogeneity advantage disappears. The IA-32 Intel platform is supported by both systems, so cost is identical. On the other hand, the software solution has a disproportionate cost (few software provided in the base install, thus a lot of expenses to extend, as well as to increase the number of users). Having to manage one OpenServer, I can say that performances are far beyond those of a Linux system. More over, its conception is older, abounds of symbolic links which makes management complex. The hardware supported by SCO is less numerous than those Linux supports. Only stay as an advantage the installed base and the set of applications available. But for how long? Caldera now owns both SCO software (Openserver and Unixware) and its own Linux distribution. But instead of trying to free technologies from SCO, they are proprietarizing their linux (1 license per server).</para>
+        <para>As mentioned upper, few advantages remain to SCO. They have thus recently decided to walk the legal way, to try taking back superiority. This attempt, far from the Free/Open Source philosophy, should incite ISVs to consider migrating to Linux.</para>
+      </sect2>
+      <sect2>
+        <title>Linux and Windows NT/2000/XP</title>
+        <para>The comparison is here more difficult, because Windows NT/2000/XP isn't an open system, as the precedings, which is already redhibitory for certain users. An excellent <ulink url="http://unix-vs-nt.org/kirch/">comparison</ulink> was made by John Kirch between Unix and Windows NT Server. I recommend to people searching to have an enlightened opinion on this subject to read it; it's updated regularly and was written by a specialist of both Microsoft and Unix operating systems. Financially, obvious advantage for the free software. And it's more obvious, as for SCO, if you consider the set of complementary software you need to use a server. The author evaluates the difference from 1 to 100 all the same! Technically, either on the functions provided or on the reliability, the administration, the performances, the hardware supported, and more over the security, Unix systems and particularly free systems outperform what is proposed by Windows NT/2000/XP. The fact to have a GUI non independant from the kernel contributes greatly to the instability of NT/2000/XP, because it's more difficult to avoid errors in a GUI (there is no mastering possible of the user comportment in front of it) rather than in a kernel.</para>
+        <para>Which are the real advantages of Windows NT ?: the marketing power of Microsoft which persuades the world that computers equal Windows and which leans on the enormous installed base; its office applications (a monopolistic situation on the market) only available in this environment;  the confusion maintained between the various flavours of Windows (95/98, NT, 2000), and between the server and client functions; its agreements with the biggest hardware manufacturers which often require them to provide a Microsoft system with their platforms; its technological initiatives to occupy the market in first, based on proprietary code and that often without respect of known or documented standards, or its policy to embrace for killing a movement (described in the <ulink url="http://www.opensource.org/halloween.html">"Haloween documents"</ulink>).</para>
+        <para>The lack of hegemony in the servers sector is the best reason to hope that a plurality of solutions may exist in the future for computers users, also at the desktop. The new XP licensing schema, the passport tool, the registering mechanism during installation are real brakes for users thinking to migrate from a current platform to a new one, as well as the hardware costs linked. In that perspective, an opensource solution should and will be more and more considered.</para>
+        <para>An analysis of the advantages of Open Source for desktop machines is available at <ulink url="http://people.trustcommerce.com/~adam/office.html"/></para>
+        <para>An analysis of various tests published between Windows vs Linux are available at <ulink url="http://www.kegel.com/nt-linux-benchmarks.html"/></para>
+        <para>At last, those who want to migrate from Windows to Linux will probably find useful the page <ulink url="http://linuxshop.ru/linuxbegin/win-lin-soft-en"/></para>
+      </sect2>
+    </sect1>
+</chapter>
+

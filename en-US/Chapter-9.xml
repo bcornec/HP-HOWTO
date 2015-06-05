@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="todo">
+    <title>Future versions</title>
+    <para>This chapter gives indications on elements which should be taken in account in future versions of this document. It should be taken more as a reminder for the author, than as an engagement of what he will really do!</para>
+    <variablelist>
+      <varlistentry>
+        <term>
+          <emphasis>Version 0.96</emphasis>
+        </term>
+        <listitem>
+          <para>Images path.</para>
+          <para>Better management of the size of tables (PS).</para>
+          <para>Place of the footer (PS).</para>
+          <para>One line paragraph management.</para>
+          <para>Management of the size of papers, margins and images (PS).</para>
+          <para>Paragraph on TX/e-vectra management</para>
+          <para>Rework the printer paragraph</para>
+          <para>Info script to pass on machines and create a new entry</para>
+          <para>Integrate LinuxCare certif</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <emphasis>Version 0.97</emphasis>
+        </term>
+        <listitem>
+          <para>URLs verification in function of the language. Use of official addresses and paragraph on mirrors.</para>
+          <para>Rework the cluster part</para>
+          <para>Paragraph on APM for mobiles computer</para>
+          <para>Linux as a backup server (Arkeia)</para>
+          <para>Remote Assistant - Remote Control. Management</para>
+          <para>Put the Argumementations in the TOC (HTML).</para>
+          <para>Avoid titles in end of page (PS).</para>
+          <para>Paragraph on network products</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <emphasis>Version 0.98</emphasis>
+        </term>
+        <listitem>
+          <para>Detail limitations of evolution from Unix to Linux</para>
+          <para>Rework the example of the vaccine :-)</para>
+          <para>Rework chapter 1 (put there history and new versions)</para>
+          <para>Glossary/Abbreviations</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </chapter>
+

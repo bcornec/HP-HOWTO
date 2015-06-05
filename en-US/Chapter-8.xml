@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="contributeurs">
+    <title>Contributors</title>
+    <para>I would like to thank especially all the people who contributed in any way to improve this HOWTO:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Markus Amersdorfer <email>markus.amersdorfer_at_aon.at</email></para>
+      </listitem>
+      <listitem>
+        <para>Pierre-Antoine Angelini <email>angelini_at_ifsic.univ-rennes1.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Emmanuel Avrillon <email>Emmanuel.Avrillon_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Khalid Aziz <email>Khalid_Aziz_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Sarah Barclay <email>Sarah_Barclay_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Tim Bell <email>bhat_at_trinity.unimelb.edu.au</email></para>
+      </listitem>
+      <listitem>
+        <para>Jeroen ten Berge <email>j.ten.berge_at_getexo.nl</email></para>
+      </listitem>
+      <listitem>
+        <para>Sylvain Bergé <email>Sylvain.Berge_at_medasys-digital-systems.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Richard Black <email>richard.black_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Nancy Blachman <email>nancy_at_blachman.org</email></para>
+      </listitem>
+      <listitem>
+        <para>Daniele Boffi <email>boffi_at_dimat.unipv.it</email></para>
+      </listitem>
+      <listitem>
+        <para>Stéphane Bortzmeyer <email>bortzmeyer_at_debian.org</email></para>
+      </listitem>
+      <listitem>
+        <para>Brendan Burns <email>bburns_at_wso.williams.edu</email></para>
+      </listitem>
+      <listitem>
+        <para>Larry Buttler <email>larry_butler_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Sylvan Butler <email>sylvan.butler_at_hp.com.invalid</email></para>
+      </listitem>
+      <listitem>
+        <para>Emmanuel Carras <email>emmanuel_carras_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Kevin Carson <email>kevin_carson_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Mike Castle <email>dalgoda_at_ix.netcom.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Jean-Bernard Chaffardon <email>Jean-Bernard_Chaffardon_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Khalil Chawoshi <email>chawoshi_at_subatech.in2p3.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Béatrice Cornec <email>beatrice_at_victoria.frmug.org</email></para>
+      </listitem>
+      <listitem>
+        <para>Michael Corral <email>mcorral_at_mediaone.net</email></para>
+      </listitem>
+      <listitem>
+        <para>Sébastien Cottalorda <email>sebastien.cottalorda_at_mageos.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Rocky Craig <email>rocky_at_fc.hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Nug Csigas <email>nug_at_sch.bme.hu</email></para>
+      </listitem>
+      <listitem>
+        <para>Mry Deck <email>Mary.Deck_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Philippe Depouilly <email>Philippe.Depouilly_at_math.u-bordeaux.fr</email> - his site : <ulink url="http://www.math.u-bordeaux.fr/~depouill"/></para>
+      </listitem>
+      <listitem>
+        <para>Ludovic Didierlaurent <email>ludovic_didierlaurent_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Yann Dirson <email>ydirson_at_fr.alcove.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Frédéric Dubuy <email>F.Dubuy_at_atrid.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Dominique Dumont <email>dominique.dumont_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Michael Dwyer <email>mdwyer_at_alumbre-tech.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Stéphane Eranian <email>Stephane_Eranian_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Mark Eve <email>Mark_Eve_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Greg Ferguson <email>gferg_at_hoop.timonium.sgi.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Gabor Fleischer <email>omnibook_at_exodus.fleischer.hu</email></para>
+      </listitem>
+      <listitem>
+        <para>Christian Frank <email>cfrank_at_grc.hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Dann Frazier <email>dannf_at_fc.hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Laurent Frey <email>laurent.frey_at_iota.u-psud.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Bertrand Gambier <email>Bertrand.Gambier_at_medasys-digital-systems.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Bdale Garbee <email>Bdale_Garbee_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Wilson Gardiner <email>Wilson_Gardiner_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Stein Roar Gjøen <email>stein.roar.gjoen_at_ks-t.no</email></para>
+      </listitem>
+      <listitem>
+        <para>Gary L. Grebus <email>glg_at_grebus.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Grant Grundler <email>grundler_at_cup.hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Jérémie Guillaume <email>jno_at_sasi.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Yann Guillemot <email>Yann_Guillemot_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Christof Haentschke <email>christof.haentschke_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Chris Hanson <email>cph_at_zurich.ai.mit.edu</email></para>
+      </listitem>
+      <listitem>
+        <para>Jim Harritt <email>jlh_at_trinidad.cv.hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Werner Heuser <email>wehe_at_snafu.de</email></para>
+      </listitem>
+      <listitem>
+        <para>Marc Hia Balié <email>Marc_Hia-Balie_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Markus Herber <email>Markus.Herber_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Jesse Don Hickson III <email>theme_at_montana.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Chris Holden <email>chris.holden_at_gte.net</email></para>
+      </listitem>
+      <listitem>
+        <para>Keith Hopkins <email>keith_hopkins_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Masanari Iida <email>Masanari_Iida_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Brett Johnson <email>Brett_Johnson_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Martin Johnson <email>martin_at_martinshouse.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Tim Jones <email>timothy.jones_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Arno Keller <email>arno_keller_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Rainer Kiehne <email>rainer.kiehne_at_tu-clausthal.de</email></para>
+      </listitem>
+      <listitem>
+        <para>Bruce Kives <email>Bruce_Kives_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Bernhard Klapper <email>bernhard_kappler_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Markus Kuhn <email>Markus.Kuhn_at_cl.cam.ac.uk</email></para>
+      </listitem>
+      <listitem>
+        <para>Claude Labroille <email>claude.labroille_at_wanadoo.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Craig Lamparter <email>raiger_at_hemna.rose.hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Pascal Lemonnier <email>Pascal.Lemonnier_at_medasys.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Frédéric Lepied <email>flepied_at_mandrakesoft.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Qing Liu <email>qliu_at_club-internet.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Fabrice Lorrain <email>Fabrice.Lorrain_at_univ-mlv.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Maciej Macowicz <email>Maciej.Macowicz_at_epfl.ch</email></para>
+      </listitem>
+      <listitem>
+        <para>Anne-Marie Mahfouf <email>a-m.mahfouf_at_lineone.net</email></para>
+      </listitem>
+      <listitem>
+        <para>Olivier Martinet <email>Olivier_Martinet_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Mad Matt <email>madmatt_at_bits.bris.ac.uk</email>  - his site : <ulink url="http://www.bits.bris.ac.uk/madmatt/laptop.shtml"/></para>
+      </listitem>
+      <listitem>
+        <para>Lee Mayes <email>Lee_Mayes_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Craig McCluskey <email>mccluskey_at_nospam.mail.utexas.edu</email></para>
+      </listitem>
+      <listitem>
+        <para>David Mentré <email>David.Mentre_at_irisa.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Jacques Misselis <email>Jacques.Misselis_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Jérôme Mollier-Pierret <email>j.mollier_at_actinux.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Lars Nakkerud <email>lars.nakkerud_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Oliver Neukum <email>520047054719-0001_at_t-online.de</email></para>
+      </listitem>
+      <listitem>
+        <para>Andreas Nierula <email>A.Nierula_at_t-online.de</email></para>
+      </listitem>
+      <listitem>
+        <para>Robert J. Niland <email>robert_niland_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Gilles Noisette <email>Gilles_Noisette_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Harry Page <email>HARRY_PAGE_at_HP-NewZealand-om1.om.hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Luis Pais <email>Luis_Pais_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Alain Pascal <email>pascal_at_montrouge.omnes.slb.com</email></para>
+      </listitem>
+      <listitem>
+        <para>David Paschal <email>paschal_at_rcsis.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Tom A Pedersen <email>tomarep_at_online.no</email></para>
+      </listitem>
+      <listitem>
+        <para>Luis Peromarta <email>Luis_Peromarta_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Soos Peter <email>sp_at_osb.hu</email></para>
+      </listitem>
+      <listitem>
+        <para>Nicolas Pettiaux <email>nicolas.pettiaux_at_openbe.org</email></para>
+      </listitem>
+      <listitem>
+        <para>Daryl Poe <email>Daryl_Poe_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Thomas Pornin <email>Thomas.Pornin_at_ens.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Karthik Prabhakar <email>karthik_prabhakar_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Fons Rademakers <email>Fons.Rademakers_at_cern.ch</email> - his site : <ulink url="http://hp-linux.cern.ch"/></para>
+      </listitem>
+      <listitem>
+        <para>Ram Rao <email>Ram.Rao_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Gallig Renaud<email>Gallig_Renaud_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Valerie Rice<email>Valerie_Rice_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Carl Riches<email>riches_at_ms.washington.edu</email></para>
+      </listitem>
+      <listitem>
+        <para>Lane Rollins <email>laner_at_teleport.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Hester van Rooyen <email>reception_at_geo.co.za</email></para>
+      </listitem>
+      <listitem>
+        <para>Eric Rueda <email>Eric_Rueda_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Rob Savoye <email>rob_at_welcomehome.org</email></para>
+      </listitem>
+      <listitem>
+        <para>Klamer Schutte <email>Schutte_at_fel.tno.nl</email></para>
+      </listitem>
+      <listitem>
+        <para>Thierry Simonnet <email>t.simonnet_at_esiee.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Chuck Slivkoff <email>charles_slivkoff_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Junichi Shimoda <email>junichi_shimoda_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Jeff Spray <email>Jeff.Spray_at_zf.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Tech Support <email>support_at_ami.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Roman Stanchak <email>rstanchak_at_yahoo.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Dean Stevenson <email>dean.stevenson_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Khader V Syed <email>skhader_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Olivier Tharan <email>olivier.tharan_at_idealx.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Nicolas Thomas <email>Nicolas_Thomas_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Venkatesh Pallipadi <email>Venkatesh.Pallipadi_at_intel.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Jimmy Vance <email>Jimmy.Vance_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Nathalie Viollet <email>Nathalie.Viollet_at_hp.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Henrik Von Klopp <email>hvk_at_hp.se</email></para>
+      </listitem>
+      <listitem>
+        <para>Dirk De Wachter <email>Dirk.DeWachter_at_rug.ac.be</email></para>
+      </listitem>
+      <listitem>
+        <para>Norman Walsh <email>ndw_at_nwalsh.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Régis Wira <email>rwira_at_mandrakesoft.com</email></para>
+      </listitem>
+      <listitem>
+        <para>Hans Witvliet <email>Hans.Witvliet_at_Alcatel.nl</email></para>
+      </listitem>
+      <listitem>
+        <para>Tony White <email>tony_at_ycs.com.au</email></para>
+      </listitem>
+      <listitem>
+        <para>Yuthay Yean <email>Yuthay.Yean_at_medasys.fr</email></para>
+      </listitem>
+      <listitem>
+        <para>Katsuyuki Yumoto <email>yumoto_at_jpn.hp.com</email></para>
+      </listitem>
+    </itemizedlist>
+</chapter>
+

@@ -8,7 +8,6 @@
 #include 'curdate.sgml'
    <!ENTITY hpl "http://www.HyPer-Linux.org/HP-HOWTO">
    <!ENTITY lg "[FR:fr:FR][EN:en:EN]">
-   <!ENTITY gfdl SYSTEM "../mirror/fdl.sgml.[FR:fr:FR][EN:en:EN]">
    <!ENTITY oui "[FR:Oui:FR][EN:Yes:EN]">
    <!ENTITY non "[FR:Non:FR][EN:No:EN]">
    <!ENTITY aucune "[FR:Sans:FR][EN:None:EN]">
@@ -1088,14 +1087,14 @@ Ce HOWTO est une documentation libre de par la volonté de &Medasys; et &HP; pou
 [EN:
 This HOWTO is a free documentation thanks to Medasys and HP for whom I do that job; you may copy, redistribute and/or modify it under the terms of the 
 :EN]
-<Link LinkEnd="gfdl">
+<emphasis>
 [FR:
 Licence de Libre Diffusion des Documents GNU, version 1.1 
 :FR]
 [EN:
 GNU Free Documentation License, Version 1.1 
 :EN]
-</link>
+</emphasis>
 [FR:
 ou n'importe quelle version ultérieure publiée par la Free Software Foundation ; sans section invariante, ni aucune couverture. Ce document est distribué dans l'espoir qu'il sera utile, mais <emphasis>sans aucune garantie</emphasis> ; notamment, vous êtes entièrement responsable de son utilisation et ne pourriez vous plaindre en cas de dysfonctionnement, voire d'endommagement de votre matériel. Tous les logiciels compris ici, s'ils ne sont pas déjà munis d'un copyright, sont placés sous GPL.
 :FR]
@@ -17702,7 +17701,5 @@ IRA avec minicom
 </VariableList>
 
 </chapter>
-
-&gfdl;
 
 </book>

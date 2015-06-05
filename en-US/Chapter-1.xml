@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="introduction">
+    <title>Introduction</title>
+    <sect1>
+      <title>Presentation</title>
+      <para>This document is a guide on the use of products proposed by the hardware manufacturer <ulink url="http://www.hp.com">Hewlett-Packard</ulink> (HP) under Linux. It's a quick reference guide, covering all what you need to know to size, install and configure your products under Linux, or which complementary software will be useful for their use. Frequently Asked Questions find answers, and references are given concerning other sources of information related to HP technologies and applications.</para>
+      <para>Opinions expressed here are those of the author, and don't commit both <ulink url="http://www.medasys.fr">Medasys</ulink> or <ulink url="http://www.hp.com">Hewlett-Packard</ulink>. Informations are provided in the aim to be useful to the readers. However, there can't be, through this document, any warranty of any kind either from Medasys or HP on these systems under Linux, as well as from myself. Neither Medasys, nor HP, nor the author could be responsible for any problem caused by the use of this information. However, software editors don't guarantee you a lot either (re-read the contracts).</para>
+      <sect2>
+        <title>New versions of this document</title>
+        <para>New versions of this document will be announced regularly on the Usenet groups <ulink url="news:fr.comp.os.linux.annonces"/> and <ulink url="news:comp.os.linux.annonces"/>. They will also be updated on the various anonymous ftp sites which archive such information, mainly <ulink url="ftp://ftp.ibiblio.org/pub/Linux/docs/HOWTO/"/>.</para>
+        <para>Hypertext versions of this and other Linux HOWTO are available on many web sites, including <ulink url="http://www.linuxdoc.org/HOWTO"/> and <ulink url="http://www.freenix.org/unix/linux/HOWTO"/>. Most Linux distributions on CD-ROM include the HOWTO, often under the <filename moreinfo="none">/usr/share/doc</filename>, directory, and you can also buy printed copies from several vendors. Sometimes the HOWTO available from CD-ROM vendors, ftp sites or printed format are out of date. If the date on this HOWTO is more than 6 months in the past, then a newer copy is probably available on the Internet. The site of reference for this HOWTO is <ulink url="http://www.hyper-linux.org/HP-HOWTO/current"/></para>
+        <para>Old versions of this document are also available at &FIXME;</para>
+        <para>If you make a translation of this document into another language, please let me know so that I can include a reference to it here. The following versions are currently available: <ulink url="http://www.HyPer-Linux.org/HP-HOWTO/old"/></para>
+        <itemizedlist spacing="compact" mark="bullet">
+          <listitem>
+            <para><ulink url="http://www.HyPer-Linux.org/HP-HOWTO/current/index.html.fr">French</ulink> by <email>Bruno_at_HyPer-Linux.org</email></para>
+          </listitem>
+          <listitem>
+            <para><ulink url="http://www.HyPer-Linux.org/HP-HOWTO/current/index.html.en">English</ulink> by <email>Bruno_at_HyPer-Linux.org</email></para>
+          </listitem>
+          <listitem>
+            <para><ulink url="http://www.HyPer-Linux.org/HP-HOWTO/jp/index.html">Japanese</ulink> by <email>junichi_shimoda_at_hp.com</email></para>
+          </listitem>
+        </itemizedlist>
+        <para>As english isn't a native language for me, I would really appreciate any correction on the english version.</para>
+      </sect2>
+      <sect2>
+        <title>Suggestions and contributions</title>
+        <para>I rely on you, the reader, to make this HOWTO useful. If you have any suggestions, corrections, or congratulations :-) don't hesitate to send them to me <email>Bruno_at_HyPer-Linux.org</email>, and I will try to incorporate them in a next revision. </para>
+        <para>I've created a mailing-list dedicated to this document. Every person interested to contribute can register at <ulink url="mailto:sympa@eurolinux.grenoble.hp.com?subject=subscribe%20hp-howto"/>, </para>
+        <para>I am also willing to answer general questions on HP hardware and software with Linux, as best I can.
+Before doing so, please read all of the information in this HOWTO, and then send me detailed information about the problem.</para>
+        <para>If you publish this document on a CD-ROM or in hardcopy form, a complimentary copy would be appreciated; mail me for my postal address. Also consider making a donation to the Linux Documentation Project to help support free documentation for Linux. Contact the Linux HOWTO coordinator, Guylhem AZNAR <email>guylhem_at_rrremovethis.oeil.qc.ca</email>.</para>
+      </sect2>
+    </sect1>
+    <sect1 xml:id="thanks">
+      <title>Aknowledgements</title>
+      <para>Most of the information provided here come from research made in HP documentations, files provided with Linux kernel sources, the FAQ of the Usenet newsgroup <ulink url="news:comp.sys.hp.hpux"/> with a <ulink url="http://hpux.cict.fr">HTML version</ulink> available on all mirror sites like the CICT, my own experience on HP products, a lot of tests and deployments realised, and remarks from Linux users as well as many HP's engineers.</para>
+      <para>Numerous people have contributed to this document and augmented its contents. You'll find the most complete possible list in the <xref linkend="contributeurs"/>. I would like to thank just now, without any particular order, those without whom this document would simply not exist:</para>
+      <itemizedlist spacing="compact" mark="bullet">
+        <listitem>
+          <para>Marc Hia Balié <email>Marc_Hia-Balie_at_hp.com</email>, who ordered that document and accepted to make it a free documentation.</para>
+        </listitem>
+        <listitem>
+          <para><ulink url="http://www.cs.helsinki.fi/~torvalds/">Linus Torvalds</ulink>, for the Linux project (without it, nothing would exist).</para>
+        </listitem>
+        <listitem>
+          <para><ulink url="http://www.gnu.org/people/rms.html">Richard Stallman</ulink>, for the GNU project (without it, nothing would exist either).</para>
+        </listitem>
+        <listitem>
+          <para>Nat Makarévitch <email>nat_at_nataa.frmug.org</email>, for his work as translator and his advocacy conferences.</para>
+        </listitem>
+        <listitem>
+          <para>Xavier Cazin <email>xc_at_itp.fr</email>, for his talent to convince me to use DocBook.</para>
+        </listitem>
+        <listitem>
+          <para>Eric Dumas <email>dumas_at_Linux.EU.Org</email>, for the management of the french LDP.</para>
+        </listitem>
+        <listitem>
+          <para>Rémy Card <email>Remy.Card_at_linux.org</email>, for ext2 and his love of electricity :-)</para>
+        </listitem>
+        <listitem>
+          <para>René Cougnenc, to have helped a lot of people to begin with Linux, including myself.</para>
+        </listitem>
+        <listitem>
+          <para>Dany Coffineau <email>Dany.Coffineau_at_alcatel.fr</email>, for teachnig me Unix.</para>
+        </listitem>
+        <listitem>
+          <para>François Strobel <email>Francois.Strobel_at_alcatel.fr</email>, for his peacefulness and legendary patience :-)</para>
+        </listitem>
+        <listitem>
+          <para>Frédéric Dubuy <email>F.Dubuy_at_atrid.fr</email>, who contributed to the writing of that document and took all the work I couldn't achieve, while I was writing it. Without saying he's also the graphist of the logo!</para>
+        </listitem>
+        <listitem>
+          <para>Alain Pascal <email>pascal_at_montrouge.omnes.slb.com</email>, for the several tests made.</para>
+        </listitem>
+        <listitem>
+          <para>Pascal Lemonnier <email>Pascal.Lemonnier_at_medasys.fr</email> typography expert who found a lot of typos.</para>
+        </listitem>
+        <listitem>
+          <para>Ralf S. Engelschall <email>rse_at_engelschall.com</email>, who realised the <ulink url="http://www.engelschall.com/sw/wml">wml</ulink> tool set, used to manage the languages of this document.</para>
+        </listitem>
+        <listitem>
+          <para>Cees de Groot <email>cg_at_sgmltools.org</email>, who realised the <ulink url="http://www.sgmltools.org">SGMLTools</ulink> used to generate the first version of this document.</para>
+        </listitem>
+        <listitem>
+          <para>Norman Walsh <email>ndw_at_nwalsh.com</email>, who realised the SGML DTD <ulink url="http://www.docbook.org">DocBook</ulink>, which allows to generate all the versions of this document from a single SGML source.</para>
+        </listitem>
+        <listitem>
+          <para>James Clark <email>jjc_at_jclark.com</email>, who realised the tool <ulink url="http://www.jclark.com/jade/">Jade</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>Cornec family <email>cornec_at_victoria.frmug.org</email>, for his patience and his support.</para>
+        </listitem>
+      </itemizedlist>
+    </sect1>
+</chapter>
+

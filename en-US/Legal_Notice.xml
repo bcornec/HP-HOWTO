@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE legalnotice [
+<!ENTITY % BOOK_ENTITIES SYSTEM "../HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<legalnotice version="5.0" xml:lang="en-US" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>License</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="SVG" fileref="./images/by-sa.svg"/>
+        </imageobject>
+        <imageobject>
+          <imagedata format="PNG" fileref="./images/by-sa.png"/>
+        </imageobject>
+      </mediaobject>
+      <para>This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <ulink url="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</ulink> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.</para>
+</legalnotice>
+
