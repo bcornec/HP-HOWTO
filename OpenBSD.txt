@@ -1,0 +1,12 @@
+OpenBSD R5.6/amd64 is running on DL3`6`0 Gen9/P440`ar` on my desk with no
+hassle.
+I can see all CPUs, memory and bgeX.  Be sure x2apic is OFF for recognition of
+all CPUs.
+But, local USB-keyboard cannot work.  So you need to use iLO4/Remote Console
+or TEXTCONS for keyboard.
+On-board SATA control must be AHCI mode, not Legacy/ATA mode for internal DVD
+drive use.
+And, no X.org cannot start...
+
+I recommend R5.7 for Gen9.  This configuration is fine with local
+USB-keyboard.
