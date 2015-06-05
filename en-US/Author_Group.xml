@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE authorgroup [
+<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
+%BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/sgml/docbook/xml-dtd-4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<authorgroup version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<author>
+		<personname>
+		  <firstname>Bruno</firstname>
+                  <surname>Cornec</surname>
+                </personname>
+		<affiliation>
+                  <orgname>Hewlett Packard</orgname>
+		</affiliation>
+                <email>Bruno_at_HyPer-Linux.org</email>
+	</author>
+</authorgroup>
+

@@ -1,0 +1,26 @@
+TARGET=HP-HOWTO
+DESTDIR=/www/hyper-linux.org/$(TARGET)
+VER=v0.97
+IMAGES=$(shell ls images/*.png | sed 's/png/eps/') 
+#images/netcraft.eps
+
+.EXPORT_ALL_VARIABLES:
+
+curdate:
+	echo -n "<!ENTITY curdate \"" > curdate.xml
+	echo -n `date +"%Y-%m-%d"` >> curdate.xml
+	echo "\">" >> curdate.xml
+	rm -f version.xml
+	echo "<!ENTITY curver \"$(VER)\">" > version.xml
+
+clean: Makefile.xml
+	rm -f curdate.xml version.xml
+
+images/%.eps: images/%.png
+	convert $< $@
+
+book: Makefile.xml $(ls en-US/*.xml) curdate $(IMAGES)
+	rm -f en-US/images
+	rm -rf tmp
+	ln -sf ../images en-US/images
+	publican build --formats=html,pdf,html-single,html-desktop,txt,epub --langs=en-US
