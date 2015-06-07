@@ -1,12 +1,4 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE chapter [
-<!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
-%BOOK_ENTITIES;
-<!ENTITY % sgml.features "IGNORE">
-<!ENTITY % xml.features "INCLUDE">
-<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
-%DOCBOOK_ENTS;
-]>
 <chapter version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="todo">
     <title>Future versions</title>
     <para>This chapter gives indications on elements which should be taken in account in future versions of this document. It should be taken more as a reminder for the author, than as an engagement of what he will really do!</para>

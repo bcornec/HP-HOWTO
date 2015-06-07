@@ -2,10 +2,6 @@
 <!DOCTYPE info [
 <!ENTITY % BOOK_ENTITIES SYSTEM "HP-HOWTO.ent">
 %BOOK_ENTITIES;
-<!ENTITY % sgml.features "IGNORE">
-<!ENTITY % xml.features "INCLUDE">
-<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
-%DOCBOOK_ENTS;
 ]>
 <info version="5.0" xml:id="info-Documentation-HP-HOWTO-HP_HOWTO" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<title>HP-HOWTO</title>
